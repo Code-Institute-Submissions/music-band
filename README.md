@@ -23,4 +23,12 @@ First Milestone Project for the Code Institute  Full Stack Software Development 
 
 - Also, they are in the process of creating a social media presence and would like to add links to their Facebook, Twitter and YouTube pages.
 
+## Notes
+Decide to go with a website based on foo fighters
+
+Google Images to find Logo for favicon
+Used gimp to edit and resize favicon to 16x16 and 32x32
+
+#### Fonts
+Google fonts - poppins
 
