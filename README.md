@@ -3,6 +3,8 @@ First Milestone Project for the Code Institute  Full Stack Software Development 
 
 ### Project Goals
 
+**Showcase ability to build a static website without JavaScript - Demonstrate understanding of css responsiveness and grid layout**
+
 
 - Build a static (front-end only) website for a band. As a starting point, you may want to use wireframes, as we did in the UX lesson (you can use Balsamiq or any other tool, including just pen and paper). You can use either your assets or the assets within the following GitHub repo.
 
