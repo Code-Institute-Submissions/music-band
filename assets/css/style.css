@@ -1,0 +1,241 @@
+
+/****************************** CSS Variables ******************************/
+
+:root {
+	/* Colors */ 
+    --black: #100F11;
+    --blue: #00ACD6;
+    --red: #F3161A;
+    --white: #f5f5f5;
+    --darkgrey: #222;
+}
+
+
+
+
+/****************************** Font Imports ******************************/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Poppins');
+
+
+
+
+/****************************** Global Styles ******************************/
+
+/* Goal is to prevent and reduce duplicate styles when possible */
+
+body, ul {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    display: inline-block;
+}
+
+li {
+    padding: 15px;
+    letter-spacing: -0.35px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+li a {
+    transition: 0.4s;
+}
+
+li a:hover {
+    color: var(--blue);
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+
+
+
+/****************************** Navigation ******************************/
+
+/*Permenant Navbar Styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: var(--black);
+    z-index: 100;
+}
+
+nav {
+    max-width: 1260px;
+    padding: .3rem 0;
+    margin: auto;
+    padding: 5px 30px;
+}
+
+nav a img {
+    vertical-align: middle;
+    margin-right: 30px;
+}
+
+
+
+
+/****************************** Menu-Mobile ******************************/
+
+/* Checkbox Hack - Position checkbox off the screen */
+input[type="checkbox"] {
+    position: absolute;
+    top: -99px;
+}
+
+/* Label can be clicked to active checkbox event */
+label {
+    cursor: pointer;
+    color: var(--white);
+    position: relative;
+    float: right;
+    top: 10px;
+}
+
+/* 
+    Position div off screen to the left
+    When activated fill whole screen and slide in
+    Use flex to determine contents center
+*/
+#menu-mobile {
+    text-align: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: -100vw;
+    background-color: var(--black);
+    z-index: 99;
+    transition: .25s;
+    transition-timing-function: ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-mobile li {
+    line-height: 1.5em;
+    display: block;
+}
+
+/* Style font-awesome icons horizontally */
+#social-mobile li {
+    margin-top: 50%;
+    display: inline-block;
+}
+
+#social-mobile li a {
+    color: var(--blue);
+}
+
+/* When checkbox toggled - change (left) on menu-mobile div */
+input[type="checkbox"]:checked ~ #menu-mobile {
+    left: 0;
+}
+
+
+
+
+/****************************** Desktop-Menu ******************************/
+
+/* Set default display to none */
+#nav-menu, 
+#social-menu {
+    display: none;
+}
+
+/* Add animation to desktop main menu */
+#nav-menu li:hover {
+    animation: menuhop .2s 1;
+    color: var(--blue);
+}
+
+@keyframes menuhop {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-.25em);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* Social menu ul */
+#social-menu {
+    float: right;
+}
+
+#social-menu li a {
+    border: 2px solid var(--blue);
+    padding: 3px 5px;
+    font-size: .75em;
+    margin-left: -20px;
+}
+
+#social-menu li a:hover {
+    border-color: var(--darkgrey);
+}
+
+
+/* Hide social sub nav until hovered */
+#social-list {
+    display: none;
+    position: absolute;
+    background-color: var(--black);
+    transform: translateX(28px);
+    top: 50px;
+    width: 100px;
+    padding: 0 0 4px 20px;
+    z-index: 101;
+    text-align: right;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+/* 
+    Keep social menu open while hovered,
+    To prevent it closing added the menu itself 
+    with z-index being greater than the navbar 
+*/
+#social-tab:hover + #social-list,
+ #social-list:hover {
+    display: block;
+}
+
+#social-list li a {
+    border-color: var(--darkgrey);
+}
+
+
+
+
+
+/****************************** Navigation Menu Media Queries ******************************/
+
+@media screen and (min-width: 750px) {
+
+    /* Disable mobile menu */
+    #label-mobile, 
+    #menu-mobile {
+        display: none;
+    }
+
+    /* Activate desktop menu */
+    #nav-menu, 
+    #social-menu {
+        display: inline-block;
+    }
+}
+
