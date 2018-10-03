@@ -122,8 +122,13 @@ label {
     align-items: center;
 }
 
+#nav-mobile {
+    margin-top: -20px;
+}
+
 #menu-mobile li {
-    line-height: 1.5em;
+    line-height: 1.2em;
+    font-size: 1.2em;
     display: block;
 }
 
