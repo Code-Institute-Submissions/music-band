@@ -1,8 +1,8 @@
 
 /****************************** CSS Variables ******************************/
 
+
 :root {
-	/* Colors */ 
     --black: #100F11;
     --blue: #00ACD6;
     --darkblue: #31394E;
@@ -15,23 +15,33 @@
 
 
 
+
+
+
+
 /****************************** Font Imports ******************************/
+
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 @font-face {
     font-family: 'Passion One Bold';
-    src: url(../fonts/PassionOne-Bold.ttf);
+    src: url(../fonts/PassionOne-Bold.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: 'Indie Flower';
-    src: url(../fonts/IndieFlower.ttf);
+    font-family: 'Amatic SC';
+    src: url(../fonts/AmaticSC-Regular.ttf) format('truetype');
 }
+
+
+
+
 
 
 
 /****************************** Global Styles ******************************/
+
 
 /* Goal is to prevent and reduce duplicate styles when possible */
 
@@ -39,22 +49,8 @@ body, ul {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: (--white);
+    color: var(--white);
 }
-
-/* Gradient and image used */
-body {
-    /* Gradient used as color wont apply */
-    background: url('../images/background-image.png'), 
-                linear-gradient(
-                    rgba(46, 55, 78, 1.0), 
-                    rgba(46, 55, 78, 1.0)
-                );
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: bottom right;
-}   
 
 ul {
     list-style: none;
@@ -82,10 +78,22 @@ a {
     color: var(--white);
 }
 
+.container-general {
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+
+
+
+
+
 
 /****************************** ****************************** ******************************
                                     Navigation / Menu
 ****************************** ****************************** ******************************/
+
 
 /*Permenant Navbar Styles */
 header {
@@ -112,7 +120,11 @@ nav a img {
 
 
 
+
+
+
 /****************************** Menu-Mobile ******************************/
+
 
 /* Checkbox Hack - Position checkbox off the screen */
 input[type="checkbox"] {
@@ -177,7 +189,11 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 
 
+
+
+
 /****************************** Desktop-Menu ******************************/
+
 
 /* Set default display to none */
 #nav-menu, 
@@ -261,7 +277,10 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 ****************************** ****************************** ******************************/
 
 
+
+
 /****************************** Slideshow ******************************/
+
 
 #slideshow, #slideshow-2, #slideshow-overlay {
     background-size: cover;
@@ -308,12 +327,17 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 
 
+
+
+
+
 /****************************** Header Content ******************************/
+
 
 #header-content {
     z-index: 1;
     text-align: center;
-    font-family: 'Passion One Bold';
+    font-family: 'Passion One Bold', sans-serif;
     position: relative;
     height: 100vh;
 }
@@ -347,7 +371,11 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 
 
-/****************************** HTML5 Audio ******************************/
+
+
+
+
+/****************************** HTML5 Audio / Album Cover ******************************/
 
 /* 
     Html Audio Element presented a challange 
@@ -376,8 +404,8 @@ input[type="checkbox"]:checked ~ #menu-mobile {
     left: 0;
     right: 0;
     color: var(--white);
-    font-family: 'Indie Flower', sans-serif;
-    font-size: 1.2rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.6rem;
     text-shadow: 2px 2px 6px #111;
     margin: 0;
 }
@@ -390,31 +418,101 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 
 
+/****************************** Call To Action ******************************/
 
-/****************************** ****************************** ******************************/
-/****************************** ****************************** ******************************/
-/****************************** ****************************** ******************************/
 
 #call-to-action {
     height: 200px;
-    width: 100%;
     text-align: center;
-    background-color: var(--black);
     box-shadow: var(--box-shadow);
 }
-#empty {
-    height: 800px;
-    width: 100%;
-    text-align: center;
+
+
+
+
+
+
+
+/****************************** Interlude ******************************/
+
+
+#interlude {
+    background: linear-gradient( 
+            rgba(46, 55, 78, 1.0),  
+            rgba(46, 55, 78, 1.0)
+            );
 }
+
+#interlude div {
+    min-width: 360px;
+    max-width: 1260px;
+    margin: auto;
+    text-align: left;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+#interlude p {
+    padding: 60px 30px 20px;
+    margin: 0;
+    line-height: 1.9rem;
+    font-size: 1.2em;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px #000;
+}
+
+#interlude div img {
+    display: block;
+    margin-left: 50%;
+    width: 50%;
+}
+
+
+
+
+
+
+
+/****************************** Footer ******************************/
+
+
+footer div {
+    min-width: 360px;
+    max-width: 1260px;
+    margin: auto;
+    padding: 1px;
+}
+
+footer p {
+    margin-left: 30px;
+}
+
+
+
 
 
 
 
 /****************************** ****************************** ******************************
-                                    Navigation Menu Media Queries
+                                    Desktop Media Queries
 ****************************** ****************************** ******************************/
 
+
+
+/* 600px */
+
+@media screen and (min-width: 600px) {
+    #interlude p {
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+        line-height: 2.5rem;
+    }
+}
+
+
+
+/* 750p */
 
 @media screen and (min-width: 750px) {
 
@@ -443,12 +541,58 @@ input[type="checkbox"]:checked ~ #menu-mobile {
     }
 
     #album-preview figure {
-        font-size: 1.6em;
+        font-size: 1.8em;
         top: -164px;
     }
 
     #album-preview img {
         visibility: visible;
+    }
+
+    #interlude p {
+        padding: 120px 30px 0;
+        margin-bottom: -70px;
+        line-height: 3.5rem;
+    }
+}
+
+
+
+/* 1200px */
+
+@media screen and (min-width: 1200px) {
+
+    #interlude {
+        height: 600px;
+        background: url('../images/background-image.png'), 
+                    linear-gradient(
+                        rgba(46, 55, 78, 1.0), 
+                        rgba(46, 55, 78, 1.0)
+                    );
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: fixed;
+        background-position: bottom right;
+    }
+
+    #interlude div img {
+        display: none;
+    }
+}
+
+
+
+/* 1400px */
+
+@media screen and (min-width: 1400px) {
+
+    #interlude p {
+        padding-top: 150px;
+        margin: 0;
+        font-size: 2rem;
+        font-family: 'Amatic SC', cursive;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 2px #000;
     }
 }
 
