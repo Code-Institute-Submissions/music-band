@@ -45,7 +45,7 @@
 
 /* Goal is to prevent and reduce duplicate styles when possible */
 
-body, ul {
+body, ul, h2 {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -85,7 +85,11 @@ a {
 }
 
 
-
+nav, #news-feed-container, #interlude div, footer div {
+    margin: auto;
+    max-width: 1260px;
+    min-width: 360px;
+}
 
 
 
@@ -106,9 +110,7 @@ header {
 }
 
 nav {
-    max-width: 1260px;
     padding: .3rem 0;
-    margin: auto;
     padding: 5px 30px;
 }
 
@@ -418,14 +420,59 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 
 
-/****************************** Call To Action ******************************/
+/****************************** News Feed ******************************/
 
+/* 
+    Decided to use flexbox to align and resize
+    news feed items, most element have set sizes and
+    look good on mobile, tablet and desktop. Regardless
+    of screen orientation.
+*/
 
-#call-to-action {
-    height: 200px;
-    text-align: center;
-    box-shadow: var(--box-shadow);
+#news-feed {
+    padding: 25px 0;
 }
+
+#news-feed h2 {
+    margin-left: 30px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    font-family: 'Amatic SC', cursive;
+}
+
+/* Wrap items as screen resizes and keep centered */
+#news-container {
+    padding:  0 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.news-item-container {
+    width: 260px;
+    padding: 20px;
+}
+
+/*  Restrict image size */
+.news-image {
+    height: 151px;
+}
+
+.news-heading {
+    color: var(--blue);
+    font-size: .8em;
+}
+
+/* Text styling */
+.news-details {
+    font-weight: bold;
+}
+
+.news-subline {
+    font-weight: lighter;
+}
+
 
 
 
@@ -444,9 +491,6 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 }
 
 #interlude div {
-    min-width: 360px;
-    max-width: 1260px;
-    margin: auto;
     text-align: left;
     padding-left: 30px;
     box-sizing: border-box;
@@ -478,14 +522,8 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 
 footer div {
-    min-width: 360px;
-    max-width: 1260px;
-    margin: auto;
     padding: 1px;
-}
-
-footer p {
-    margin-left: 30px;
+    text-align: center;
 }
 
 
