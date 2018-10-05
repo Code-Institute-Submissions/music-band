@@ -71,21 +71,22 @@
         <div>
             <!-- Cannot submit form -no backend or Javascript exists -->
             <form>
+                <!-- Personal Infomation Section -->
                 <fieldset>
                     <legend>Personal Information</legend>
                     <div>
                         <label for="name" >Name:</label>
-                        <input type="text" name="name" placeholder="name" required >
+                        <input type="text" name="name" id="name" placeholder="name" required >
                         <label for="email" >Email:</label>
-                        <input type="email" name="email" placeholder="email" required >
+                        <input type="email" name="email" id="email" placeholder="email" required >
                         <label for="age" >Age:</label>
-                        <input type="date" name="age" min="1999-12-31" required><br>
+                        <input type="date" name="age" id="age" min="1999-12-31" required><br>
                     </div>
 
                     <div>
-                        <label for="location">Where are you?</label>
+                        <p>Where are you?</p>
                         <select name="location" required>
-                            <option value=""></option>
+                            <option label="Select Location"></option>
                             <option value="Europe">Europe</option>
                             <option value="Asia">Asia</option>
                             <option value="Africa">Africa</option>
@@ -96,28 +97,30 @@
                     </div>
                 </fieldset>
 
+                <!-- Questions Section -->
                 <fieldset>
                     <legend>How do you listen to us?</legend>
                     <div class="multiline-fields">
-                        <label for="platform">How do you listen to us? <span style="font-size: small"> (Tick all that apply)</span></label>
+                        <p>How do you listen to us? <span style="font-size: small"> (Tick all that apply)</span></p>
                         <input type="checkbox" name="platform" value="spotify"><span>Spotify</span>
                         <input type="checkbox" name="platform" value="personal-library"><span>Personal Library</span>
                         <input type="checkbox" name="platform" value="radio"><span>Radio</span>
                         <input type="checkbox" name="platform" value="other"><span>Other</span>
                     </div>
                     <div class="multiline-fields">
-                        <label for="albums-owned">How many of our albums do you own? <span style="font-size: small"> (Tick all that apply)</span></label>
-                        <input type="radio" name="albums-owned" value="spotify"><span> None</span>
-                        <input type="radio" name="albums-owned" value="personal-library"><span>Only One</span>
-                        <input type="radio" name="albums-owned" value="radio"><span>Two or more</span>
-                        <input type="radio" name="albums-owned" value="other"><span>All of them</span>
+                        <p>How many of our albums do you own? <span style="font-size: small"> (Tick all that apply)</span></p>
+                        <input type="radio" name="albums-owned" value="0"><span> None</span>
+                        <input type="radio" name="albums-owned" value="1"><span>Only One</span>
+                        <input type="radio" name="albums-owned" value="2+"><span>Two or more</span>
+                        <input type="radio" name="albums-owned" value="all"><span>All of them</span>
                     </div>
                 </fieldset>
 
+                <!-- Agree and Submit Section -->
                 <fieldset>
                     <legend>Our corporate friends want you to agree!</legend>
                     <div id="agree-div">
-                        <input type="checkbox" name="agree" required >
+                        <input type="checkbox" name="agree"  id="agree" required >
                         <label for="agree">I agree that I am above 18 years old and I wish to be sent qotsa news and special offers to my email address. </label>
                     </div>
                     
@@ -138,12 +141,10 @@
             <p>Matador - Rekords<span class="reverse-letter">R</span>ecords &copy; 2018</p>
         </div>
     </footer>
-    
-    
-    
-    
-        <!-- External Stylesheets - placed at the bottom to speed up page load -->
-        <!-- Font-Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+     <!-- External Stylesheets - placed at the bottom to speed up page load -->
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </body>
 </html>
