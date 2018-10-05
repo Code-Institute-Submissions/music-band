@@ -1,7 +1,6 @@
 
 /****************************** CSS Variables ******************************/
 
-
 :root {
     --black: #100F11;
     --blue: #00ACD6;
@@ -17,10 +16,7 @@
 
 
 
-
-
 /****************************** Font Imports ******************************/
-
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
@@ -42,14 +38,20 @@
 
 /****************************** Global Styles ******************************/
 
-
-/* Goal is to prevent and reduce duplicate styles when possible */
+html {
+    height: calc(100% - 20px);
+}
 
 body, ul, h2 {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     color: var(--white);
+}
+
+body {
+    position: relative;
+    min-height: 100%;
 }
 
 ul {
@@ -85,11 +87,28 @@ a {
 }
 
 
-nav, #news-feed-container, #interlude div, footer div {
+nav, 
+#news-feed-container, 
+#interlude div, 
+#newletter {
     margin: auto;
     max-width: 1260px;
-    min-width: 360px;
+    min-width: 320px;
 }
+
+
+/* Sticky Footer */
+footer  {
+    background-color: var(--black);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1px;
+    text-align: center;    
+}
+
+
 
 
 
@@ -97,7 +116,6 @@ nav, #news-feed-container, #interlude div, footer div {
 /****************************** ****************************** ******************************
                                     Navigation / Menu
 ****************************** ****************************** ******************************/
-
 
 /*Permenant Navbar Styles */
 header {
@@ -112,6 +130,7 @@ header {
 nav {
     padding: .3rem 0;
     padding: 5px 30px;
+    min-width: auto;
 }
 
 nav a img {
@@ -124,18 +143,16 @@ nav a img {
 
 
 
-
 /****************************** Menu-Mobile ******************************/
 
-
 /* Checkbox Hack - Position checkbox off the screen */
-input[type="checkbox"] {
+#nav-checkbox {
     position: absolute;
     top: -99px;
 }
 
 /* Label can be clicked to active checkbox event */
-label {
+#label-mobile {
     cursor: pointer;
     color: var(--white);
     position: relative;
@@ -164,7 +181,7 @@ label {
 }
 
 #nav-mobile {
-    margin-top: -20px;
+    margin-top: -30px;
 }
 
 #menu-mobile li {
@@ -175,7 +192,6 @@ label {
 
 /* Style font-awesome icons horizontally */
 #social-mobile li {
-    margin-top: 50%;
     display: inline-block;
 }
 
@@ -193,9 +209,7 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 
 
-
 /****************************** Desktop-Menu ******************************/
-
 
 /* Set default display to none */
 #nav-menu, 
@@ -273,16 +287,13 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 
 
-
 /****************************** ****************************** ******************************
                                     INDEX / HOME PAGE
 ****************************** ****************************** ******************************/
 
 
 
-
 /****************************** Slideshow ******************************/
-
 
 #slideshow, #slideshow-2, #slideshow-overlay {
     background-size: cover;
@@ -332,9 +343,7 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 
 
-
 /****************************** Header Content ******************************/
-
 
 #header-content {
     z-index: 1;
@@ -369,8 +378,6 @@ input[type="checkbox"]:checked ~ #menu-mobile {
     padding: 10px 10px;
     color: var(--black);
 }
-
-
 
 
 
@@ -416,6 +423,8 @@ input[type="checkbox"]:checked ~ #menu-mobile {
     visibility: hidden;
     border: 3px solid var(--black);
 }
+
+
 
 
 
@@ -478,16 +487,14 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 
 
-
-
 /****************************** Interlude ******************************/
-
 
 #interlude {
     background: linear-gradient( 
             rgba(46, 55, 78, 1.0),  
             rgba(46, 55, 78, 1.0)
             );
+    padding-bottom: 20px;
 }
 
 #interlude div {
@@ -508,6 +515,7 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 #interlude div img {
     display: block;
+    margin-top: -40px;
     margin-left: 50%;
     width: 50%;
 }
@@ -517,15 +525,14 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 
 
+/****************************** ****************************** ******************************
+                                    NEWSLETTER PAGE
+****************************** ****************************** ******************************/
 
-/****************************** Footer ******************************/
-
-
-footer div {
-    padding: 1px;
-    text-align: center;
+#newsletter div {
+    margin: auto;
+    max-width: 1200px;
 }
-
 
 
 
@@ -536,10 +543,18 @@ footer div {
                                     Desktop Media Queries
 ****************************** ****************************** ******************************/
 
+/*  500px */
+@media screen and (min-width: 500px) {
+    #interlude div img {
+        margin-top: -55px;
+        margin-left: 50%;
+        width: 50%;
+    }
+}
+
 
 
 /* 600px */
-
 @media screen and (min-width: 600px) {
     #interlude p {
         font-size: 2rem;
@@ -551,7 +566,6 @@ footer div {
 
 
 /* 750p */
-
 @media screen and (min-width: 750px) {
 
     /* Disable mobile menu */
@@ -587,21 +601,25 @@ footer div {
         visibility: visible;
     }
 
-    #interlude p {
-        padding: 120px 30px 0;
-        margin-bottom: -70px;
-        line-height: 3.5rem;
+    #interlude div img {
+        margin-top: -120px;
     }
 }
 
 
+/*  1000px */
+@media screen and (min-width: 1000px) {
+    #interlude div img {
+        margin-top: -230px;
+    }
+}
+
 
 /* 1200px */
-
 @media screen and (min-width: 1200px) {
 
     #interlude {
-        height: 600px;
+        height: 700px;
         background: url('../images/background-image.png'), 
                     linear-gradient(
                         rgba(46, 55, 78, 1.0), 
@@ -613,6 +631,11 @@ footer div {
         background-position: bottom right;
     }
 
+    #interlude div p {
+        line-height: 3.5rem;
+        padding-bottom: 50px;
+    }
+
     #interlude div img {
         display: none;
     }
@@ -621,7 +644,6 @@ footer div {
 
 
 /* 1400px */
-
 @media screen and (min-width: 1400px) {
 
     #interlude p {
