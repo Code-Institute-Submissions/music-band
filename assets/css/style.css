@@ -37,21 +37,14 @@
 
 
 /****************************** Global Styles ******************************/
-
-html {
-    height: calc(100% - 20px);
-}
-
 body, ul, h2 {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: var(--white);
 }
 
-body {
-    position: relative;
-    min-height: 100%;
+ul, h2, footer, #interlude {
+    color: var(--white);
 }
 
 ul {
@@ -80,13 +73,6 @@ a {
     color: var(--white);
 }
 
-.container-general {
-    width: 100%;
-    background-color: var(--black);
-    color: var(--white);
-}
-
-
 nav, 
 #news-feed-container, 
 #interlude div, 
@@ -96,18 +82,15 @@ nav,
     min-width: 320px;
 }
 
-
-/* Sticky Footer */
-footer  {
-    background-color: var(--black);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1px;
-    text-align: center;    
+#newsletter {
+    background-image: url('../images/backgrounds/background-image.png');
 }
 
+.container {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: auto;
+}
 
 
 
@@ -440,6 +423,9 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 #news-feed {
     padding: 25px 0;
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 #news-feed h2 {
@@ -529,9 +515,182 @@ input[type="checkbox"]:checked ~ #menu-mobile {
                                     NEWSLETTER PAGE
 ****************************** ****************************** ******************************/
 
-#newsletter div {
-    margin: auto;
-    max-width: 1200px;
+#newsletter-heading {
+    padding: 110px 30px 40px;
+    background: linear-gradient( to top,rgba(49, 57, 78, 0.9) 25%, rgba(0, 0, 0, 1.0)), url('https://d1b8neuccscdpp.cloudfront.net/img/viewfinder/uploads/5a5e84cd30955.jpg'); 
+    background-size: cover;
+    color: var(--white);
+    text-align: center;
+    border-bottom: 40px solid var(--black);
+}
+
+#newsletter-heading h1 {
+    font-family: 'Passion One Bold', sans-serif;
+    font-size: 2em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    margin: 0;
+}
+
+#newsletter form {
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 0 30px;
+    border: none;
+}
+
+#newsletter fieldset {
+    margin: 60px 0;
+    border: none;
+}
+
+#newsletter fieldset legend {
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.6rem;
+    letter-spacing: 2.5px;
+}
+
+#newsletter label {
+    display: block;
+    margin: 30px 0 10px;
+}
+
+#newsletter input[type="text"],
+#newsletter input[type="email"],
+#newsletter input[type="date"],
+select {
+    width: 100%;
+    border: 1px solid #999;
+    padding: 10px;
+}
+
+
+.multiline-fields label {
+    margin-bottom: 15px;
+}
+
+.multiline-fields span {
+    margin: 10px;  
+}
+
+#agree-div {
+    margin-bottom: 50px;
+}
+
+#agree-div input[type="checkbox"] {
+    margin-left: 0;
+    margin-right: 5px;
+    margin-top: 30px;
+}
+
+#agree-div label{
+    display: inline-block;
+    font-size: 0.7rem;
+    margin-top: 5px;
+}
+/* #newsletter form {
+    margin: 70px auto;
+    padding: 0 30px;
+    max-width: 600px;
+}
+
+#newsletter label {
+    display: block;
+    margin: 10px 0 7px;
+}
+
+fieldset {
+    margin-top: 60px;
+    border: none;
+}
+
+fieldset div {
+
+}
+
+legend {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 2.5px;
+}
+
+input[type="text"], input[type="email"] {
+    border: 1px solid #999;
+    min-height: 40px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#newsletter input[type="checkbox"] {
+    margin-left: 0;
+}
+
+#consent-label {
+    font-size: 0.7rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: .85em;
+}
+#form-buttons {
+    margin-top: 30px;
+}
+
+fieldset input[type="checkbox"], fieldset input[type="radio"] {
+    display: inline-block;
+}
+
+
+fieldset div span {
+    margin-left: 10px;
+    margin-right: 30px;
+} */
+
+#form-buttons input {
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: var(--darkblue);
+    color: var(--white);
+    display: block;
+    width: 100%;
+    box-shadow: var(--boxshadow);
+    transition: 0.4s;
+}
+
+#form-buttons input:hover {
+    background-color: var(--black);
+    box-shadow: 0 3px 15px 1px rgba(0,0,0,0.8);
+}
+
+
+/****************************** ****************************** ******************************
+                                    Footer
+****************************** ****************************** ******************************/
+
+
+footer  {
+    background-color: var(--black);
+    padding: 1px;
+    text-align: center;    
+}
+
+/* 
+    Only used on pages that might need the footer 
+    stuck to bottom when content cant fill the height
+*/
+#footer {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.reverse-letter {
+    transform: scale(-1, 1);
+    display: inline-block;
 }
 
 
@@ -620,7 +779,7 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
     #interlude {
         height: 700px;
-        background: url('../images/background-image.png'), 
+        background: url('../images/backgrounds/desert-vampire.png'), 
                     linear-gradient(
                         rgba(46, 55, 78, 1.0), 
                         rgba(46, 55, 78, 1.0)

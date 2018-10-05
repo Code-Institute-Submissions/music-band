@@ -62,23 +62,80 @@
     </header>
 
 
-    <!-- Subscribe Form -->
+    <!-- Newsletter Subscription Form -->
     <section id="newsletter">
         <div id="newsletter-heading">
-            <h1>Subscribe to the newsletter for <br />news, tour dates and exclusive offers direct to your inbox.</h1>
+            <h1>SUBSCRIBE TO THE NEWSLETTER.</h1>
+            <p>Get the Latest News, Tour Dates and Exclusive Offers Direct to your Inbox.</p>
         </div>
         <div>
+            <!-- Cannot submit form -no backend or Javascript exists -->
             <form>
-                <label for="name" >Name:</label>
-                <input type="text" name="name" placeholder="name   *" required>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div>
+                        <label for="name" >Name:</label>
+                        <input type="text" name="name" placeholder="name" required >
+                        <label for="email" >Email:</label>
+                        <input type="email" name="email" placeholder="email" required >
+                        <label for="age" >Age:</label>
+                        <input type="date" name="age" min="1999-12-31" required><br>
+                    </div>
+
+                    <div>
+                        <label for="location">Where are you?</label>
+                        <select name="location" required>
+                            <option value=""></option>
+                            <option value="Europe">Europe</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Africa">Africa</option>
+                            <option value="North America">North America</option>
+                            <option value="South America">South America</option>
+                            <option value="Austrailia">Austrailia</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>How do you listen to us?</legend>
+                    <div class="multiline-fields">
+                        <label for="platform">How do you listen to us? <span style="font-size: small"> (Tick all that apply)</span></label>
+                        <input type="checkbox" name="platform" value="spotify"><span>Spotify</span>
+                        <input type="checkbox" name="platform" value="personal-library"><span>Personal Library</span>
+                        <input type="checkbox" name="platform" value="radio"><span>Radio</span>
+                        <input type="checkbox" name="platform" value="other"><span>Other</span>
+                    </div>
+                    <div class="multiline-fields">
+                        <label for="albums-owned">How many of our albums do you own? <span style="font-size: small"> (Tick all that apply)</span></label>
+                        <input type="radio" name="albums-owned" value="spotify"><span> None</span>
+                        <input type="radio" name="albums-owned" value="personal-library"><span>Only One</span>
+                        <input type="radio" name="albums-owned" value="radio"><span>Two or more</span>
+                        <input type="radio" name="albums-owned" value="other"><span>All of them</span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Our corporate friends want you to agree!</legend>
+                    <div id="agree-div">
+                        <input type="checkbox" name="agree" required >
+                        <label for="agree">I agree that I am above 18 years old and I wish to be sent qotsa news and special offers to my email address. </label>
+                    </div>
+                    
+                    <!-- These buttons is only for visual purposes -->
+                    <div id="form-buttons">
+                        <input type="submit" value="SUBMIT">
+                        <input type="reset" value="CLEAR ALL FIELDS">
+                    </div>
+                </fieldset>
             </form>
         </div>
     </section>
 
+
     <!-- Footer -->
-    <footer id="stickyfooter">
+    <footer>
         <div>
-            <p>Matador - Rekords Rekords &copy; 2018</p>
+            <p>Matador - Rekords<span class="reverse-letter">R</span>ecords &copy; 2018</p>
         </div>
     </footer>
     
@@ -88,5 +145,5 @@
         <!-- External Stylesheets - placed at the bottom to speed up page load -->
         <!-- Font-Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    </body>
-    </html>
+</body>
+</html>
