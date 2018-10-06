@@ -5,13 +5,6 @@
 ****************************** ****************************** ******************************/
 
 
-/* 
-    Mobile first Approach stops a table behaving like one
-    and needs a :before selector to apply headings.
-    When desktop width is reached - will be transformed to a table again.
-    Help from CSS Tricks with nth:selector and :before selector.
-*/
-
 #tour-table {
     padding: 110px 0;
 }
@@ -25,6 +18,7 @@ table {
     font-weight: 600;
 }
 
+/* Table heading */
 th {
     padding-top: 15px;
     padding-bottom: 20px;
@@ -43,6 +37,7 @@ th, td {
     padding-left: 15px;
 }
 
+/* Table Row */
 tr {
     padding: 15px;
     height: 3em;
@@ -53,6 +48,8 @@ tr:nth-child(odd) {
     background-color: #e5e5e5;
 }
 
+
+/* Table Data */
 td .available {
     color: var(--red);
 }
@@ -65,7 +62,13 @@ td a:hover {
     display: none;
 }
 
-
+/* 
+    In this case a desktop first approach was preferable.
+    Help from CSS Tricks was needed to arrange the table in mobile view.
+    In particular the addition of nth:selector and :before selector to transform the headings
+    into a good mobile view.
+    When desktop width is reached - will be transformed to a table again.
+*/
 @media screen and (max-width: 750px) { 
 
     #table-desktop-heading {
