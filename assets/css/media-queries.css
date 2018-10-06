@@ -1,11 +1,18 @@
 
 
-/* Target only webkit browsers - from Stack Overflow */
+/* 
+    Target only webkit browsers - from Stack Overflow 
+    Issue: Browsers style the html audio individually
+    Solution: Target webkit browsers and set div background color;
+*/
 @media screen and (-webkit-min-device-pixel-ratio:0){
     #album-preview {
         background-color: var(--white); 
     } 
 }
+
+
+
 
 /*  500px */
 @media screen and (min-width: 500px) {
@@ -71,12 +78,14 @@
 }
 
 
+
 /*  1000px */
 @media screen and (min-width: 1000px) {
     #interlude div img {
         margin-top: -230px;
     }
 }
+
 
 
 /* 1200px */

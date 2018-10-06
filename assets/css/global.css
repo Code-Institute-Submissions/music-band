@@ -23,7 +23,7 @@
 
 
 /****************************** ****************************** ******************************
-                                    Global Styles
+                                    General
 ****************************** ****************************** ******************************/
 
 
@@ -63,8 +63,18 @@ li a:hover {
 
 a {
     text-decoration: none;
-    color: var(--white);
 }
+
+
+
+
+
+/****************************** ****************************** ******************************
+                                    Global Styles
+****************************** ****************************** ******************************/
+
+
+
 
 
 /* Container width */
@@ -72,7 +82,7 @@ nav,
 #news-feed-container, 
 #interlude div, 
 #newletter, 
-#tour {
+#tour-table {
     margin: auto;
     max-width: 1260px;
     min-width: 320px;
@@ -80,6 +90,26 @@ nav,
 
 ul, h2, footer {
     color: var(--white);
+}
+
+.heading {
+    padding: 110px 30px 40px;
+    background: linear-gradient( to top,rgba(49, 57, 78, 0.9) 25%, rgba(0, 0, 0, 1.0)), url('https://d1b8neuccscdpp.cloudfront.net/img/viewfinder/uploads/5a5e84cd30955.jpg'); 
+    background-size: cover;
+    color: var(--white);
+    text-align: center;
+    border-bottom: 40px solid var(--black);
+}
+
+.heading h1 {
+    font-family: 'Passion One Bold', sans-serif;
+    font-size: 2em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    margin: 0;
+}
+
+.active {
+    color: var(--blue);
 }
 
 
@@ -100,13 +130,17 @@ header {
     width: 100vw;
     background-color: var(--black);
     z-index: 100;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--boxshadow);
 }
 
 nav {
     padding: .3rem 0;
     padding: 5px 30px;
     min-width: auto;
+}
+
+nav li a {
+    color: var(--white);
 }
 
 nav a img {
