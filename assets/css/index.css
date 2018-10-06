@@ -1,0 +1,256 @@
+
+
+/****************************** ****************************** ******************************
+                                    Index Page
+****************************** ****************************** ******************************/
+
+
+
+
+
+#slideshow, #slideshow-2, #slideshow-overlay {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+    height: 100vh;
+}
+
+/* Set background image for slideshow fade */
+#slideshow {
+    background-image: url('https://d1b8neuccscdpp.cloudfront.net/img/viewfinder/uploads/5a5e84cd30955.jpg');
+}
+
+/* Set background image for slideshow fade */
+#slideshow-2 {
+    background-image: url('https://d1b8neuccscdpp.cloudfront.net/img/viewfinder/uploads/5a5e84c6570e8.jpg');
+    animation: slideshow  10s infinite;
+}
+
+/* Create overlay on slideshow for better text legibility */
+#slideshow-overlay {
+    background: linear-gradient( to top,rgba(49, 57, 78, 0.5) 25%, rgba(0, 0, 0, 1.0));
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+}
+
+/* 
+    When image fades the background image will be revealed 
+    giving the illusion of a slideshow
+*/
+@keyframes slideshow {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/****************************** ****************************** ******************************
+                                   Header Content
+****************************** ****************************** ******************************/
+
+
+
+
+
+#header-content {
+    z-index: 1;
+    text-align: center;
+    font-family: 'Passion One Bold', sans-serif;
+    position: relative;
+    height: 100vh;
+}
+
+#header-content h1, #header-content span {
+    box-shadow: var(--boxshadow);
+    border-radius: 2px;
+}
+
+#header-content h1 {
+    font-size: 3rem;
+    color: var(--white);
+    margin-top: 100px;
+    display: inline-block;
+    background-color: var(--black);
+    padding: 25px 5px;
+    transform: rotate(-2deg);
+    width: 90%;
+    
+}
+
+#header-content span {
+    display: block;
+    position: absolute;
+    background-color: var(--white);
+    font-size: 1.2rem;
+    padding: 10px 10px;
+    color: var(--black);
+}
+
+
+
+
+
+/****************************** ****************************** ******************************
+                                   HTML5 Audio Section
+****************************** ****************************** ******************************/
+
+
+
+
+
+/* 
+    Html Audio Element presented a challange 
+    to style as it is different across browsers
+    defaults to a grey background, Without using JavaScript
+    I cannot create my own controls and must rely on the HTML5 Element
+*/
+#album-preview {
+    background-color: #191919;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+#album-preview figure {
+    position: absolute;
+    top: -164px;
+    left: 0;
+    right: 0;
+    color: var(--white);
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.6rem;
+    text-shadow: 2px 2px 6px #111;
+    margin: 0;
+}
+
+#album-preview img {
+    visibility: hidden;
+    border: 3px solid var(--black);
+}
+
+
+
+
+
+
+/****************************** ****************************** ******************************
+                                   News Feed
+****************************** ****************************** ******************************/
+
+
+
+
+
+/* 
+    Decided to use flexbox to align and resize
+    news feed items, most element have set sizes and
+    look good on mobile, tablet and desktop. Regardless
+    of screen orientation.
+*/
+#news-feed {
+    padding: 25px 0;
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#news-feed h2 {
+    margin-left: 30px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    font-family: 'Amatic SC', cursive;
+}
+
+/* Wrap items as screen resizes and keep centered */
+#news-container {
+    padding:  0 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.news-item-container {
+    width: 260px;
+    padding: 20px;
+}
+
+.news-image {
+    height: 151px;
+}
+
+.news-heading {
+    color: var(--blue);
+    font-size: .8em;
+}
+
+.news-details {
+    font-weight: bold;
+}
+
+.news-subline {
+    font-weight: lighter;
+}
+
+
+
+
+
+/****************************** ****************************** ******************************
+                                   Interlude
+****************************** ****************************** ******************************/
+
+
+
+
+
+#interlude {
+    background: linear-gradient( 
+            rgba(46, 55, 78, 1.0),  
+            rgba(46, 55, 78, 1.0)
+            );
+    padding-bottom: 20px;
+    color: var(--white);
+}
+
+#interlude div {
+    text-align: left;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+#interlude p {
+    padding: 60px 30px 20px;
+    margin: 0;
+    line-height: 1.9rem;
+    font-size: 1.2em;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px #000;
+}
+
+#interlude div img {
+    display: block;
+    margin-top: -40px;
+    margin-left: 50%;
+    width: 50%;
+}
+
+
+
+
+
+
+

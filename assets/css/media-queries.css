@@ -1,0 +1,122 @@
+
+
+/* Target only webkit browsers - from Stack Overflow */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+    #album-preview {
+        background-color: var(--white); 
+    } 
+}
+
+/*  500px */
+@media screen and (min-width: 500px) {
+    #interlude div img {
+        margin-top: -55px;
+        margin-left: 50%;
+        width: 50%;
+    }
+}
+
+
+
+/* 600px */
+@media screen and (min-width: 600px) {
+    #interlude p {
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+        line-height: 2.5rem;
+    }
+}
+
+
+
+/* 750p */
+@media screen and (min-width: 750px) {
+
+    /* Disable mobile menu */
+    #label-mobile, 
+    #menu-mobile {
+        display: none;
+    }
+
+    /* Activate desktop menu */
+    #nav-menu, 
+    #social-menu {
+        display: inline-block;
+    }
+
+    #header-content h1 {
+        font-size: 6rem;
+        padding: 20px 30px;
+        width: auto;
+        max-width: 85%;
+    }
+
+    #header-content span {
+        font-size: 2rem;
+        padding: 10px 20px;
+    }
+
+    #album-preview figure {
+        font-size: 1.8em;
+        top: -164px;
+    }
+
+    #album-preview img {
+        visibility: visible;
+    }
+
+    #interlude div img {
+        margin-top: -120px;
+    }
+}
+
+
+/*  1000px */
+@media screen and (min-width: 1000px) {
+    #interlude div img {
+        margin-top: -230px;
+    }
+}
+
+
+/* 1200px */
+@media screen and (min-width: 1200px) {
+
+    #interlude {
+        height: 700px;
+        background: url('../images/backgrounds/desert-vampire.png'), 
+                    linear-gradient(
+                        rgba(46, 55, 78, 1.0), 
+                        rgba(46, 55, 78, 1.0)
+                    );
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: fixed;
+        background-position: bottom right;
+    }
+
+    #interlude div p {
+        line-height: 3.5rem;
+        padding-bottom: 50px;
+    }
+
+    #interlude div img {
+        display: none;
+    }
+}
+
+
+
+/* 1400px */
+@media screen and (min-width: 1400px) {
+
+    #interlude p {
+        padding-top: 150px;
+        margin: 0;
+        font-size: 2rem;
+        font-family: 'Amatic SC', cursive;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 2px #000;
+    }
+}
+

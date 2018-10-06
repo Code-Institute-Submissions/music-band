@@ -1,0 +1,57 @@
+
+
+/****************************** ****************************** ******************************
+                                    Live / Tour Page
+****************************** ****************************** ******************************/
+
+
+
+
+
+/* #tour {
+    padding: 110px 0 60px;
+}
+
+#tour a {
+    color: black;
+}
+
+#tour a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+th {
+    text-align: left;
+    padding-bottom: 30px;
+    background-color: pink;
+}
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+tr:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+td {
+    line-height: 2em;
+}
+
+th:last-of-type, td:last-of-type {
+    display: none;
+}
+
+table, th, td, thead {
+    border-left: 1px solid var(--black);
+    border-right: 1px solid var(--black);
+    padding-left: 15px;  
+    padding-right: 15px;  
+} */
