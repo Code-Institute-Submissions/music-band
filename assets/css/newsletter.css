@@ -4,8 +4,8 @@
 ****************************** ****************************** ******************************/
 
 #newsletter form {
-    margin: 50px auto;
     max-width: 600px;
+    margin: 50px auto;
     padding: 0 30px;
     border: none;
 }
@@ -31,15 +31,15 @@
 #newsletter input[type="date"],
 select {
     width: 100%;
-    border: 1px solid #999;
     padding: 10px;
+    border: 1px solid #999;
 }
 
 
 .multiline-fields label,
 .multiline-fields p {
-    margin-bottom: 15px;
     margin-top: 40px;
+    margin-bottom: 15px;
 }
 
 .multiline-fields span {
@@ -51,28 +51,28 @@ select {
 }
 
 #agree-div input[type="checkbox"] {
+    margin-top: 30px;
     margin-left: 0;
     margin-right: 5px;
-    margin-top: 30px;
 }
 
 #agree-div label{
     display: inline-block;
-    font-size: 0.7rem;
     margin-top: 5px;
+    font-size: 0.7rem;
 }
 
 #form-buttons input {
-    cursor: pointer;
-    border: none;
-    padding: 10px 15px;
-    margin-top: 10px;
-    background-color: var(--darkblue);
-    color: var(--white);
     display: block;
     width: 100%;
-    box-shadow: var(--boxshadow);
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
     transition: 0.4s;
+    cursor: pointer;
+    color: var(--white);
+    box-shadow: var(--boxshadow);
+    background-color: var(--darkblue);
 }
 
 #form-buttons input:hover {

@@ -6,31 +6,28 @@
 
 
 #slideshow, #slideshow-2, #slideshow-overlay {
+    position: relative;
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-    position: relative;
-    height: 100vh;
 }
 
-/* Set background image for slideshow fade */
 #slideshow {
     background-image: url('https://d1b8neuccscdpp.cloudfront.net/img/viewfinder/uploads/5a5e84cd30955.jpg');
 }
 
-/* Set background image for slideshow fade */
 #slideshow-2 {
     background-image: url('https://d1b8neuccscdpp.cloudfront.net/img/viewfinder/uploads/5a5e84c6570e8.jpg');
     animation: slideshow  10s infinite;
 }
 
-/* Create overlay on slideshow for better text legibility */
 #slideshow-overlay {
-    background: linear-gradient( to top,rgba(49, 57, 78, 0.5) 25%, rgba(0, 0, 0, 1.0));
     position: absolute;
-    z-index: 1;
     top: 0;
     width: 100%;
+    z-index: 1;
+    background: linear-gradient( to top,rgba(49, 57, 78, 0.5) 25%, rgba(0, 0, 0, 1.0));
 }
 
 /* 
@@ -54,45 +51,42 @@
 
 
 /****************************** ****************************** ******************************
-                                   Header Content
+                                   Index Header Content
 ****************************** ****************************** ******************************/
 
 
-
-
-
 #header-content {
-    z-index: 1;
-    text-align: center;
-    font-family: 'Passion One Bold', sans-serif;
     position: relative;
     height: 100vh;
+    font-family: 'Passion One Bold', sans-serif;
+    text-align: center;
+    z-index: 1;
 }
 
 #header-content h1, #header-content span {
-    box-shadow: var(--boxshadow);
     border-radius: 2px;
+    box-shadow: var(--boxshadow);
 }
 
 #header-content h1 {
-    font-size: 3rem;
-    color: var(--white);
-    margin-top: 100px;
     display: inline-block;
-    background-color: var(--black);
-    padding: 25px 5px;
-    transform: rotate(-2deg);
     width: 90%;
+    margin-top: 100px;
+    padding: 25px 5px;
+    font-size: 3rem;
+    transform: rotate(-2deg);
+    color: var(--white);
+    background-color: var(--black);
     
 }
 
 #header-content span {
     display: block;
     position: absolute;
-    background-color: var(--white);
-    font-size: 1.2rem;
     padding: 10px 10px;
+    font-size: 1.2rem;
     color: var(--black);
+    background-color: var(--white);
 }
 
 
@@ -104,9 +98,6 @@
 ****************************** ****************************** ******************************/
 
 
-
-
-
 /* 
     Html Audio Element presented a challange 
     to style as it is different across browsers
@@ -114,10 +105,10 @@
     I cannot create my own controls and must rely on the HTML5 Element
 */
 #album-preview {
-    background-color: #191919;
-    width: 100%;
     position: absolute;
     bottom: 0;
+    width: 100%;
+    background-color: #191919;
 }
 
 #album-preview figure {
@@ -125,11 +116,11 @@
     top: -164px;
     left: 0;
     right: 0;
+    margin: 0;
     color: var(--white);
     font-family: 'Amatic SC', cursive;
     font-size: 1.6rem;
     text-shadow: 2px 2px 6px #111;
-    margin: 0;
 }
 
 #album-preview img {
@@ -147,50 +138,30 @@
 ****************************** ****************************** ******************************/
 
 
-
-
-
-/* 
-    Decided to use flexbox to align and resize
-    news feed items, most element have set sizes and
-    look good on mobile, tablet and desktop. Regardless
-    of screen orientation.
-*/
 #news-feed {
-    padding: 25px 0;
     width: 100%;
+    padding: 25px 0;
+    color: #ddd;
     background-color: var(--black);
-    color: var(--white);
 }
 
 #news-feed h2 {
     margin-left: 30px;
     margin-bottom: 15px;
-    text-decoration: underline;
     font-family: 'Amatic SC', cursive;
 }
 
-/* Wrap items as screen resizes and keep centered */
-#news-container {
-    padding:  0 30px;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
 .news-item-container {
-    width: 260px;
-    padding: 20px;
+    max-width: 270px;
 }
 
 .news-image {
-    height: 151px;
+    height: 150px;
 }
 
 .news-heading {
-    color: var(--blue);
     font-size: .8em;
+    color: var(--blue);
 }
 
 .news-details {
@@ -206,14 +177,11 @@
 
 
 /****************************** ****************************** ******************************
-                                   Interlude
+                                   Creative
 ****************************** ****************************** ******************************/
 
 
-
-
-
-#interlude {
+#creative {
     background: linear-gradient( 
             rgba(46, 55, 78, 1.0),  
             rgba(46, 55, 78, 1.0)
@@ -222,27 +190,27 @@
     color: var(--white);
 }
 
-#interlude div {
-    text-align: left;
-    padding-left: 30px;
+#creative div {
     box-sizing: border-box;
+    padding-left: 30px;
+    text-align: left;
 }
 
-#interlude p {
-    padding: 60px 30px 20px;
+#creative p {
     margin: 0;
-    line-height: 1.9rem;
-    font-size: 1.2em;
+    padding: 60px 30px 20px;
     font-family: 'Amatic SC', cursive;
+    font-size: 1.2em;
+    line-height: 1.9rem;
     letter-spacing: 1px;
     text-shadow: 2px 2px 2px #000;
 }
 
-#interlude div img {
+#creative div img {
     display: block;
+    width: 50%;
     margin-top: -40px;
     margin-left: 50%;
-    width: 50%;
 }
 
 

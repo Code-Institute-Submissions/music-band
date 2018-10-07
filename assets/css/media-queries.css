@@ -1,4 +1,4 @@
-
+/* Media Queries based on content breakpoints and not common device specific breakpoints */
 
 /* 
     Target only webkit browsers - from Stack Overflow 
@@ -6,6 +6,7 @@
     Solution: Target webkit browsers and set div background color;
 */
 @media screen and (-webkit-min-device-pixel-ratio:0){
+
     #album-preview {
         background-color: var(--white); 
     } 
@@ -14,26 +15,92 @@
 
 
 
-/*  500px */
-@media screen and (min-width: 500px) {
-    #interlude div img {
-        margin-top: -55px;
-        margin-left: 50%;
-        width: 50%;
+
+/****************************** ****************************** ******************************
+                                  Mobile  Queries
+****************************** ****************************** ******************************/
+
+/* 
+    In this case a desktop first approach was preferable.
+    Help from CSS Tricks was needed to arrange the table in mobile view.
+    In particular the addition of nth:selector and :before selector to transform the headings
+    into a good mobile view.
+    When desktop width is reached - will be transformed to a table again.
+*/
+@media screen and (max-width: 750px) { 
+
+    #table-desktop-heading {
+        display: none;
     }
+
+    #table-mobile-heading {
+        display: table-row;
+        background: none;
+    }
+
+    table, thead, tbody, th, td, tr { 
+        display: block; 
+    }
+
+    tr {
+        height: auto;
+    }
+
+    td { 
+        position: relative;
+        min-height: 2em;
+        margin-left: 10px;
+        padding-left: 40%; 
+        border: none;
+    }
+    
+    td:before { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+    }
+    
+    td:nth-of-type(1):before { content: "Date"; font-weight: bold;}
+    td:nth-of-type(2):before { content: "Location"; font-weight: bold;}
+    td:nth-of-type(3):before { content: "Venue"; font-weight: bold;}
+    td:nth-of-type(4):before { content: "Tickets"; font-weight: bold;}
 }
 
+
+
+
+
+/****************************** ****************************** ******************************
+                                  Mobile First Approach - Desktop Queries
+****************************** ****************************** ******************************/
+
+/*  500px */
+@media screen and (min-width: 500px) {
+    
+    #creative div img {
+        width: 50%;
+        margin-top: -55px;
+        margin-left: 50%;
+    }
+}
 
 
 /* 600px */
 @media screen and (min-width: 600px) {
-    #interlude p {
+
+    #creative p {
         font-size: 2rem;
-        letter-spacing: 1.5px;
         line-height: 2.5rem;
+        letter-spacing: 1.5px;
+    }
+
+    .grid-container {
+        grid-template-columns: auto auto;
     }
 }
-
 
 
 /* 750p */
@@ -52,46 +119,54 @@
     }
 
     #header-content h1 {
-        font-size: 6rem;
-        padding: 20px 30px;
         width: auto;
         max-width: 85%;
+        padding: 20px 30px;
+        font-size: 6rem;
     }
 
     #header-content span {
-        font-size: 2rem;
         padding: 10px 20px;
+        font-size: 2rem;
     }
 
     #album-preview figure {
-        font-size: 1.8em;
         top: -164px;
+        font-size: 1.8em;
     }
 
     #album-preview img {
         visibility: visible;
     }
 
-    #interlude div img {
+    #creative div img {
         margin-top: -120px;
     }
 }
 
 
+/*  900px */
+@media screen and (min-width: 900px) {
+
+    .grid-container {
+        grid-template-columns: auto auto auto;
+    }
+}
+
 
 /*  1000px */
 @media screen and (min-width: 1000px) {
-    #interlude div img {
+
+    #creative div img {
         margin-top: -230px;
     }
 }
 
 
-
 /* 1200px */
 @media screen and (min-width: 1200px) {
 
-    #interlude {
+    #creative {
         height: 700px;
         background: url('../images/backgrounds/desert-vampire.png'), 
                     linear-gradient(
@@ -104,24 +179,27 @@
         background-position: bottom right;
     }
 
-    #interlude div p {
-        line-height: 3.5rem;
+    #creative div p {
         padding-bottom: 50px;
+        line-height: 3.5rem;
     }
 
-    #interlude div img {
+    #creative div img {
         display: none;
     }
-}
 
+    .grid-container {
+        grid-template-columns: auto auto auto auto;
+    }
+}
 
 
 /* 1400px */
 @media screen and (min-width: 1400px) {
 
-    #interlude p {
-        padding-top: 150px;
+    #creative p {
         margin: 0;
+        padding-top: 150px;
         font-size: 2rem;
         font-family: 'Amatic SC', cursive;
         letter-spacing: 1px;

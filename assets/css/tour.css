@@ -11,20 +11,19 @@
 table {
     width: 100%;
     margin: auto;
-    border-collapse: collapse;
-    letter-spacing: 1.5px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
+    letter-spacing: 1.5px;
+    border-collapse: collapse;
 }
 
-/* Table heading */
 th {
     padding-top: 15px;
     padding-bottom: 20px;
     font-family: 'Passion One Bold', sans-serif;
     font-size: 1.5em;
-    text-transform: uppercase;
     font-weight: lighter;
+    text-transform: uppercase;
 }
 
 th i {
@@ -37,10 +36,9 @@ th, td {
     padding-left: 15px;
 }
 
-/* Table Row */
 tr {
-    padding: 15px;
     height: 3em;
+    padding: 15px;
     font-size: 0.9em;
 }
 
@@ -48,10 +46,8 @@ tr:nth-child(odd) {
     background-color: #e5e5e5;
 }
 
-
-/* Table Data */
 td .available {
-    color: var(--red);
+    color: var(--linkblue);
 }
 
 td a:hover {
@@ -60,54 +56,5 @@ td a:hover {
 
 #table-mobile-heading {
     display: none;
-}
-
-/* 
-    In this case a desktop first approach was preferable.
-    Help from CSS Tricks was needed to arrange the table in mobile view.
-    In particular the addition of nth:selector and :before selector to transform the headings
-    into a good mobile view.
-    When desktop width is reached - will be transformed to a table again.
-*/
-@media screen and (max-width: 750px) { 
-
-    #table-desktop-heading {
-        display: none;
-    }
-
-    #table-mobile-heading {
-        display: table-row;
-        background: none;
-    }
-
-    table, thead, tbody, th, td, tr { 
-        display: block; 
-    }
-
-    tr {
-        height: auto;
-    }
-
-    td { 
-        position: relative;
-        border: none;
-        padding-left: 40%; 
-        min-height: 2em;
-        margin-left: 10px;
-    }
-    
-    td:before { 
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 45%; 
-        padding-right: 10px; 
-        white-space: nowrap;
-    }
-    
-    td:nth-of-type(1):before { content: "Date"; font-weight: bold;}
-    td:nth-of-type(2):before { content: "Location"; font-weight: bold;}
-    td:nth-of-type(3):before { content: "Venue"; font-weight: bold;}
-    td:nth-of-type(4):before { content: "Tickets"; font-weight: bold;}
 }
 
