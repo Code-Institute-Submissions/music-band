@@ -4,38 +4,37 @@
 ****************************** ****************************** ******************************/
 
 .container h2 {
-    margin: 110px 30px 50px;
-    color: var(--black); 
+    margin: 100px 50px 0;
 }
 
-.album-title {
-    font-size: 0.8em;
-    letter-spacing: -.5px;
+.media-title, .media-price {
+    font-size: 12px;
+    font-weight: 700;
     text-transform: uppercase;
     color: #333;
 }
 
-.album-image {
+.media-image {
     height: 200px;
 }
 
-.album-links {
+.media-links {
     margin-top: 20px;
 }
 
-.album-links a {
+.media-links a {
     display: block;
     height: 25px; 
-    color: var(--black);
+    color: #424242;
 }
 
-.album-links a:hover {
+.media-links a:hover {
     transition: 0.3s;
     text-decoration: underline;
     color: var(--linkblue);
 }
 
-.album-links a span {
+.media-links a span {
     display: inline-block;
     width: 30px;
 }

@@ -71,6 +71,7 @@ nav a img {
     left: -100vw;
     z-index: 99;
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -79,13 +80,14 @@ nav a img {
     background-color: var(--black);
 }
 
-#nav-mobile {
-    margin-top: -30px;
+#nav-mobile  {
+    margin-top: -70px;
 }
 
 #menu-mobile li {
-    line-height: 1.2em;
-    font-size: 1.2em;
+    display: block;
+    line-height: 1em;
+    font-size: 1em;
 }
 
 #social-mobile li {
@@ -144,28 +146,5 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 }
 
 #social-menu li a:hover {
-    border-color: var(--darkgrey);
-}
-
-#social-list {
-    display: none;
-    position: absolute;
-    top: 50px;
-    width: 100px;
-    padding: 0 0 4px 20px;
-    text-align: right;
-    z-index: 101;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    transform: translateX(28px);
-    background-color: var(--black);
-}
-
-#social-tab:hover + #social-list,
- #social-list:hover {
-    display: block;
-}
-
-#social-list li a {
     border-color: var(--darkgrey);
 }
