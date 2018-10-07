@@ -21,9 +21,9 @@
             <!-- Main navigation links - Left -->
             <ul id="nav-menu">
                 <li><a href="store.html">STORE</a></li>
-                <li><a href="tour.html">TOUR</a></li>
                 <li><a href="media.html">MEDIA</a></li>
                 <li><a href="band.html">BAND</a></li>
+                <li><a href="tour.html">TOUR</a></li>
             </ul>
             <!-- Social navigation links - Right -->
             <ul id="social-menu">
@@ -48,9 +48,9 @@
                 <ul id="nav-mobile">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="store.html">STORE</a></li>
-                    <li><a href="tour.html">TOUR</a></li>
                     <li><a href="media.html">MEDIA</a></li>
                     <li><a href="band.html">BAND</a></li>
+                    <li><a href="tour.html">TOUR</a></li>
                     <li><a href="newsletter.html">NEWSLETTER</a></li>
                     <ul id="social-mobile">
                         <li><a href="https://www.facebook.com/QOTSA/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -62,104 +62,106 @@
         </nav>
     </header>
 
+    <main>
+        <!-- Slideshow / Header Content -->
+        <section id="slideshow">
+            <div id="slideshow-2"></div>
+            <div id="slideshow-overlay">
 
-    <!-- Slideshow / Header Content -->
-    <section id="slideshow">
-        <div id="slideshow-2"></div>
-        <div id="slideshow-overlay">
+                <!-- Header Content -->
+                <div id="header-content">
+                    <h1>QUEENS OF THE STONE AGE
+                        <span>. . . Like Clockwork Tour 2018</span>
+                    </h1>
 
-            <!-- Header Content -->
-            <div id="header-content">
-                <h1>QUEENS OF THE STONE AGE
-                    <span>. . . Like Clockwork Tour 2018</span>
-                </h1>
-
-                <!-- Display HTML5 Audio player for album preview -->
-                <div id="album-preview">
-                    <figure>
-                        <img height="100" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/16/Queens_of_the_Stone_Age_-_%E2%80%A6Like_Clockwork.png/220px-Queens_of_the_Stone_Age_-_%E2%80%A6Like_Clockwork.png" alt="like clockwork album cover">
-                        <figcaption>Preview the new album ' ... like Clockwork'</figcaption>
-                    </figure>
-                    <audio src="assets/audio/album-preview.mp3" preload="none" controls></audio>
+                    <!-- Display HTML5 Audio player for album preview -->
+                    <div id="album-preview">
+                        <figure>
+                            <img height="100" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/16/Queens_of_the_Stone_Age_-_%E2%80%A6Like_Clockwork.png/220px-Queens_of_the_Stone_Age_-_%E2%80%A6Like_Clockwork.png" alt="like clockwork album cover">
+                            <figcaption>Preview the new album ' ... like Clockwork'</figcaption>
+                        </figure>
+                        <audio src="assets/audio/album-preview.mp3" preload="none" controls></audio>
+                    </div>
                 </div>
             </div>
+        </section>
+
+
+        <!-- News Feed -->
+        <!-- This section will be displayed using flexbox -->
+        <!-- Ideally, A JavaScript array would dynamically fill content and create containers -->
+        <!-- Hard Coded Static News Feed -->
+        <section id="news-feed">
+            <div id="news-feed-container">
+                <h2>Recently ...</h2>
+                <div id="news-container">
+                    <div class="news-item-container">
+                        <p class="news-heading">NEWS</p>
+                        <img class="news-image" src="assets/images/news/qotsa1.jpg" alt="Queens Of The Stone Age Have Added New Shows To Their Australian Tour">
+                        <div class="news-feed-text">
+                            <p class="news-details">
+                                Queens Of The Stone Age Have Added New Shows To Their Australian Tour
+                            </p>
+                            <p class="news-subline">
+                                Good news Sydney & Melbourne!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-item-container">
+                        <p class="news-heading">NEWS</p>
+                        <img class="news-image" src="assets/images/news/qotsa2.jpg" alt="Hear Queens Of The Stone Age’s New Single ‘The Way You Used To Do’">
+                        <div class="news-feed-text">
+                            <p class="news-details">
+                                Hear Queens Of The Stone Age’s New Single ‘The Way You Used To Do’
+                            </p>
+                            <p class="news-subline">
+                                They’re back!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-item-container">
+                        <p class="news-heading">NEWS</p>
+                        <img class="news-image" src="assets/images/news/qotsa3.png" alt="Queens Of The Stone Age Release Mysterious New Video">
+                        <div class="news-feed-text">
+                            <p class="news-details">
+                                Queens Of The Stone Age Release Mysterious New Video
+                            </p>
+                            <p class="news-subline">
+                                That new album can’t be far away…
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-item-container">
+                        <p class="news-heading">NEWS</p>
+                        <img class="news-image" src="assets/images/news/qotsa4.jpg" alt="Josh Homme: “There’s A Lot Of New Songs”">
+                        <div class="news-feed-text">
+                            <p class="news-details">
+                                    Josh Homme: “There’s A Lot Of New Songs”
+                            </p>
+                            <p class="news-subline">
+                                    Josh Homme says he and the rest of the band are to get back into the studio.
+                            </p>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </section>
+
+
+        <!-- Artistic Interlude -->
+        <div id="interlude">
+            <div>
+                <p>
+                    IT CAME FROM THE DESERT.<br />
+                    WHAT WAS "IT", EXACTLY? <br />
+                    IT CAME OUT OF THE IRRADIATED CALIFORNIA WASTELAND,<br />
+                    IT’S EVIDENTLY STILL AROUND. <br />
+                    IT LIVES. IT BREATHES. IT CAN’T BE STOPPED.
+                </p>
+                <img src="assets/images/backgrounds/desert-vampire.png" alt="desert vampire">
+            </div>
         </div>
-    </section>
-
-
-    <!-- News Feed -->
-    <!-- Ideally, A JavaScript array would dynamically fill content and create containers -->
-    <!-- Hard Coded Static News Feed -->
-    <section id="news-feed">
-        <div id="news-feed-container">
-            <h2>Recently ...</h2>
-            <div id="news-container">
-                <div class="news-item-container">
-                    <p class="news-heading">NEWS</p>
-                    <img class="news-image" src="assets/images/news/qotsa1.jpg" alt="Queens Of The Stone Age Have Added New Shows To Their Australian Tour">
-                    <div class="news-feed-text">
-                        <p class="news-details">
-                            Queens Of The Stone Age Have Added New Shows To Their Australian Tour
-                        </p>
-                        <p class="news-subline">
-                            Good news Sydney & Melbourne!
-                        </p>
-                    </div>
-                </div>
-                <div class="news-item-container">
-                    <p class="news-heading">NEWS</p>
-                    <img class="news-image" src="assets/images/news/qotsa2.jpg" alt="Hear Queens Of The Stone Age’s New Single ‘The Way You Used To Do’">
-                    <div class="news-feed-text">
-                        <p class="news-details">
-                            Hear Queens Of The Stone Age’s New Single ‘The Way You Used To Do’
-                        </p>
-                        <p class="news-subline">
-                            They’re back!
-                        </p>
-                    </div>
-                </div>
-                <div class="news-item-container">
-                    <p class="news-heading">NEWS</p>
-                    <img class="news-image" src="assets/images/news/qotsa3.png" alt="Queens Of The Stone Age Release Mysterious New Video">
-                    <div class="news-feed-text">
-                        <p class="news-details">
-                            Queens Of The Stone Age Release Mysterious New Video
-                        </p>
-                        <p class="news-subline">
-                            That new album can’t be far away…
-                        </p>
-                    </div>
-                </div>
-                <div class="news-item-container">
-                    <p class="news-heading">NEWS</p>
-                    <img class="news-image" src="assets/images/news/qotsa4.jpg" alt="Josh Homme: “There’s A Lot Of New Songs”">
-                    <div class="news-feed-text">
-                        <p class="news-details">
-                                Josh Homme: “There’s A Lot Of New Songs”
-                        </p>
-                        <p class="news-subline">
-                                Josh Homme says he and the rest of the band are to get back into the studio.
-                        </p>
-                    </div>
-                </div>
-            </div>     
-        </div>
-    </section>
-
-
-    <!-- Artistic Interlude -->
-    <div id="interlude">
-        <div>
-            <p>
-                IT CAME FROM THE DESERT.<br />
-                WHAT WAS "IT", EXACTLY? <br />
-                IT CAME OUT OF THE IRRADIATED CALIFORNIA WASTELAND,<br />
-                IT’S EVIDENTLY STILL AROUND. <br />
-                IT LIVES. IT BREATHES. IT CAN’T BE STOPPED.
-            </p>
-            <img src="assets/images/backgrounds/desert-vampire.png" alt="desert vampire">
-        </div>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer>

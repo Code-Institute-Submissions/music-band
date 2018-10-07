@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="The official website of Queens of the Stone Age. Fans can purchase official music, get tour dates, learn about the band, browse exclusive qotsa media and more.">
     <link rel="icon" href="assets/images/logos/favicon_32x32.png" sizes="32x32">
-    <!-- CSS Stylesheets -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Queens of the Stone Age</title>
 </head>
@@ -14,22 +14,22 @@
     <header>
         <nav>
             <!-- Logo and link to homepage-->
-            <a href="index.html"><img src="assets/images/logos/qotsa-logo.png" height="40px" alt="Queens of the Stone Age official logo - home"></a>
+            <a href="index.html"><img src="assets/images/logos/qotsa-logo.png" height="40" alt="Queens of the Stone Age official logo - home"></a>
 
 
             <!-- Desktop Menu - Shown above 750px -->
             <!-- Main navigation links - Left -->
             <ul id="nav-menu">
-                <li><a href="store.html">STORE</a></li>
-                <li><a href="tour.html">TOUR</a></li>
+                <li><a href="store.html" class="active">STORE</a></li>
                 <li><a href="media.html">MEDIA</a></li>
                 <li><a href="band.html">BAND</a></li>
+                <li><a href="tour.html">TOUR</a></li>
             </ul>
             <!-- Social navigation links - Right -->
             <ul id="social-menu">
                 <li><a href="newsletter.html">NEWSLETTER</a></li>
                 <li id="social-tab"><a href="#">SOCIAL</a></li>
-                <!-- Hidden Social Links Menu - Show on Hover of social-tab-->
+                <!-- Hidden Social Links Menu - Show on hover of social-tab -->
                 <div id="social-list">
                     <li><a href="https://www.facebook.com/QOTSA/" target="_blank">Facebook</a></li>
                     <li><a href="https://twitter.com/qotsa" target="_blank">Twitter</a></li>
@@ -47,9 +47,9 @@
             <div id="menu-mobile">
                 <ul id="nav-mobile">
                     <li><a href="store.html">STORE</a></li>
-                    <li><a href="tour.html">TOUR</a></li>
                     <li><a href="media.html">MEDIA</a></li>
                     <li><a href="band.html">BAND</a></li>
+                    <li><a href="tour.html">TOUR</a></li>
                     <li><a href="newsletter.html">NEWSLETTER</a></li>
                     <ul id="social-mobile">
                         <li><a href="https://www.facebook.com/QOTSA/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -61,7 +61,31 @@
         </nav>
     </header>
 
-    <!-- External Stylesheets  -->
+    <main>
+        <!-- Media / Buy Music Albums -->
+        <section>
+                <div class="heading">
+                    <h1>BUY OUR MUSIC. BUY. BUY. BUY.</h1>
+                    <p>We Accept All The Ways to Give Us Money.</p>
+                </div>
+
+                <!-- Music album display with retailer links -->
+                <!-- This section will be displayed using css grid -->
+                <div id="store">
+
+                </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <p>Matador - Rekords<span class="reverse-letter">R</span>ecords &copy; 2018</p>
+        </div>
+    </footer>
+
+
+     <!-- External Stylesheets - placed at the bottom to speed up page load -->
     <!-- Font-Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </body>

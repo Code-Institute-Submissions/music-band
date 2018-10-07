@@ -1,7 +1,6 @@
 
-
 /****************************** ****************************** ******************************
-                                    Live / Tour Page
+                                    Live / Tour Dates
 ****************************** ****************************** ******************************/
 
 
@@ -22,9 +21,10 @@ table {
 th {
     padding-top: 15px;
     padding-bottom: 20px;
-    font-family: 'Passion One Bold', 'Roboto', sans-serif;
+    font-family: 'Passion One Bold', sans-serif;
     font-size: 1.5em;
     text-transform: uppercase;
+    font-weight: lighter;
 }
 
 th i {
