@@ -89,7 +89,6 @@ nav,
     grid-template-columns: auto;
     justify-items: center;
     max-width: 1200px;
-    margin: 0 auto 110px;
     padding: 30px;
 
 }
@@ -119,6 +118,11 @@ nav,
     font-size: 2em;
     font-weight: lighter;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+}
+
+.heading p {
+    text-transform: capitalize;
 }
 
 

@@ -40,7 +40,7 @@ tr {
     height: 3em;
     padding: 15px;
     font-size: 0.9em;
-    border-bottom: 1px solid#ccc;
+    border-bottom: 1px solid#999;
 }
 
 tr:nth-child(odd) {

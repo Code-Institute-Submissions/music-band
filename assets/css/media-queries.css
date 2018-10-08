@@ -77,25 +77,9 @@
                                   Mobile First Approach - Desktop Queries
 ****************************** ****************************** ******************************/
 
-/*  500px */
-@media screen and (min-width: 500px) {
-    
-    #creative div img {
-        width: 50%;
-        margin-top: -55px;
-        margin-left: 50%;
-    }
-}
-
 
 /* 600px */
 @media screen and (min-width: 600px) {
-
-    #creative p {
-        font-size: 2rem;
-        line-height: 2.5rem;
-        letter-spacing: 1.5px;
-    }
 
     .grid-container {
         grid-template-columns: auto auto;
@@ -139,8 +123,9 @@
         visibility: visible;
     }
 
-    #creative div img {
-        margin-top: -120px;
+    #creative img {
+        width: 40%;
+        bottom: -10%;
     }
 }
 
@@ -148,66 +133,29 @@
 /*  900px */
 @media screen and (min-width: 900px) {
 
+    #creative p { 
+        padding-top: 100px;
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    #creative img {
+        bottom: -10%;
+    }
+
     .grid-container {
         grid-template-columns: auto auto auto;
     }
 }
 
 
-/*  1000px */
-@media screen and (min-width: 1000px) {
-
-    #creative div img {
-        margin-top: -230px;
-    }
-}
-
 
 /* 1200px */
 @media screen and (min-width: 1200px) {
 
-    #creative {
-        height: 700px;
-        background: url('../images/backgrounds/desert-vampire.png'), 
-                    linear-gradient(
-                        rgba(46, 55, 78, 1.0), 
-                        rgba(46, 55, 78, 1.0)
-                    );
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-attachment: fixed;
-        background-position: bottom right;
-    }
-
-    #creative div p {
-        padding-bottom: 50px;
-        line-height: 3.5rem;
-    }
-
-    #creative div img {
-        display: none;
-    }
-
     .grid-container {
         grid-template-columns: auto auto auto auto;
     }
-
-    #news-container.grid-container {
-        margin: 0;
-    }
 }
 
-
-/* 1400px */
-@media screen and (min-width: 1400px) {
-
-    #creative p {
-        margin: 0;
-        padding-top: 150px;
-        font-size: 2rem;
-        font-family: 'Amatic SC', cursive;
-        letter-spacing: 1px;
-        text-shadow: 2px 2px 2px #000;
-    }
-}
 
