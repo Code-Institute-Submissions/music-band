@@ -1,0 +1,39 @@
+
+
+/****************************** ****************************** ******************************
+                                    Photos / Mosaic
+****************************** ****************************** ******************************/
+
+.media-h2 {
+    margin: 100px 30px 0;
+}
+
+#photos {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.column {
+    flex: 96%;
+    max-width: 98%;
+    padding: 0 5px;
+}
+
+.column img {
+    width: 100%;
+    margin-top: 8px;
+}
+
+#photos-grid-cover {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: -125px;
+    margin-bottom: -90px;
+    z-index: 1;
+    background: url(../images/backgrounds/bg.png);
+}
+
+

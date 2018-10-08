@@ -73,6 +73,7 @@ nav,
 #newletter, 
 #tour-table,
 #store,
+#photos,
 .container {
     margin: auto;
     max-width: 1260px;
@@ -81,21 +82,6 @@ nav,
 
 .active {
     color: var(--blue);
-}
-
-.grid-container {
-    display: grid;
-    grid-gap: 50px;
-    grid-template-columns: auto;
-    justify-items: center;
-    max-width: 1200px;
-    padding: 30px;
-
-}
-
-.reverse-letter {
-    display: inline-block;
-    transform: scale(-1, 1);
 }
 
 .heading {
@@ -124,6 +110,26 @@ nav,
 .heading p {
     text-transform: capitalize;
 }
+
+.grid-container {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: auto;
+    justify-items: center;
+    max-width: 1200px;
+    padding: 30px;
+
+}
+
+.grid-margin {
+    margin: 0 auto 110px;
+}
+
+.reverse-letter {
+    display: inline-block;
+    transform: scale(-1, 1);
+}
+
 
 
 

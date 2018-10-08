@@ -84,6 +84,11 @@
     .grid-container {
         grid-template-columns: auto auto;
     }
+
+    .column {
+        flex: 46%;
+        max-width: 48%;
+    }
 }
 
 
@@ -146,6 +151,11 @@
     .grid-container {
         grid-template-columns: auto auto auto;
     }
+
+    .column {
+        flex: 22%;
+        max-width: 24%;
+    }
 }
 
 
@@ -155,6 +165,10 @@
 
     .grid-container {
         grid-template-columns: auto auto auto auto;
+    }
+
+    .media-h2 {
+        margin-left: 0;
     }
 }
 
