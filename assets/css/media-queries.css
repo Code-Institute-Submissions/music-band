@@ -93,7 +93,7 @@
     .video-container {
         display: inline-block;
         width: calc(50% - 10px);
-        padding-bottom: 28.105%;
+        padding-bottom: 27.2%;
     }
 }
 
@@ -138,6 +138,10 @@
         width: 40%;
         bottom: -10%;
     }
+
+    .tour-h2 {
+        margin-left: 10px;
+    }
 }
 
 
@@ -165,7 +169,7 @@
 
     .video-container {
         width: calc(25% - 10px);
-        padding-bottom: 14.05%;
+        padding-bottom: 13.5%;
     }
 }
 

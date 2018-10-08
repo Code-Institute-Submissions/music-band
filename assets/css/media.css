@@ -42,8 +42,14 @@
 
 .video-container {
     position: relative;
-    margin-top: 15px;
+    margin-top: 40px;
     padding-bottom: 56.21%;
+}
+
+.video-title {
+    position: absolute;
+    top: -35px;
+    left: 5px;
 }
 
 
@@ -53,4 +59,5 @@
     left: 0;
     width: 100%;
     height: 100%;
+    border: none;
 }

@@ -3,9 +3,12 @@
                                     Live / Tour Dates
 ****************************** ****************************** ******************************/
 
+.tour-h2  {
+    margin: 60px 30px;;
+}
 
 #tour-table {
-    padding: 110px 0;
+    padding-bottom: 150px;
 }
 
 table {
@@ -17,7 +20,7 @@ table {
     border-collapse: collapse;
 }
 
-th {
+th  {
     padding-top: 15px;
     padding-bottom: 20px;
     font-family: 'Passion One Bold', sans-serif;

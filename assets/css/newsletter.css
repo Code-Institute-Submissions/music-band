@@ -42,8 +42,12 @@ select {
     margin-bottom: 15px;
 }
 
+.input-container{
+    display: block;
+}
+
 .multiline-fields span {
-    margin: 10px;  
+    margin: 15px;  
 }
 
 #agree-div {
