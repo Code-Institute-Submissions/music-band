@@ -89,6 +89,12 @@
         flex: 46%;
         max-width: 48%;
     }
+
+    .video-container {
+        display: inline-block;
+        width: calc(50% - 10px);
+        padding-bottom: 28.105%;
+    }
 }
 
 
@@ -155,6 +161,11 @@
     .column {
         flex: 22%;
         max-width: 24%;
+    }
+
+    .video-container {
+        width: calc(25% - 10px);
+        padding-bottom: 14.05%;
     }
 }
 
