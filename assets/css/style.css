@@ -1,13 +1,11 @@
-@import "global.css";
-@import "menu.css";
-@import "index.css";
-@import "store.css";
-@import "tour.css";
-@import "media.css";
-@import "newsletter.css";
-@import "media-queries.css";
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
+/*
+==================================================================
+    GLOBAL / FONTS
+==================================================================
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
 @font-face {
     font-family: 'Passion One Bold';
@@ -15,3 +13,975 @@
 @font-face {
     font-family: 'Amatic SC';
     src: url(../fonts/AmaticSC-Regular.ttf) format('truetype');}
+
+
+
+
+/*
+==================================================================
+    GLOBAL / VARIABLES
+==================================================================
+*/
+
+:root {
+    --black: #100F11;
+    --blue: #00ACD6;
+    --darkblue: #31394E;
+    --red: #F3161A;
+    --white: #f5f5f5;
+    --darkgrey: #222;
+    --linkblue: #007bff;
+    --boxshadow: 0 1px 20px 1px rgba(0,0,0,0.4);
+}
+
+
+
+
+/*
+==================================================================
+    GLOBAL / GENERAL STYLES
+==================================================================
+*/
+
+body {
+    background: var(--white);
+}
+
+body, ul, h2 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    display: inline-block;
+    list-style: none;
+}
+
+li {
+    padding: 15px;
+    letter-spacing: -0.15px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer  {
+    text-align: center;    
+    padding: 1px;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+hr {
+    width: 5%;
+}
+
+nav, 
+#news-feed-container, 
+#creative div, 
+#newletter, 
+#tour-table,
+#store,
+#photos,
+.container {
+    margin: auto;
+    max-width: 1260px;
+    min-width: 320px;
+}
+
+.active {
+    color: var(--blue);
+}
+
+.heading {
+    border-bottom: none;
+    padding: 110px 30px 40px;
+    text-align: center;
+    background: var(--black);
+    color: var(--white);
+}
+
+.heading-alt {
+    border-bottom: 40px solid var(--black);
+    background: linear-gradient( to top,rgba(49, 57, 78, 0.9) 25%, rgba(0, 0, 0, 1.0)), url('https://d1b8neuccscdpp.cloudfront.net/img/viewfinder/uploads/5a5e84cd30955.jpg'); 
+    background-size: cover;
+}
+
+.heading h1 {
+    margin: 0;
+    font-family: 'Passion One Bold', sans-serif;
+    font-size: 2em;
+    font-weight: lighter;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+}
+
+.heading p {
+    text-transform: capitalize;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: auto;
+    justify-items: center;
+    max-width: 1200px;
+    padding: 30px;
+
+}
+
+.grid-margin {
+    margin: 0 auto 110px;
+}
+
+.reverse-letter {
+    display: inline-block;
+    transform: scale(-1, 1);
+}
+
+
+
+
+/*
+==================================================================
+    GLOBAL / NAVIGATION
+==================================================================
+*/
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+    background-color: var(--black);
+    box-shadow: var(--boxshadow);
+}
+
+nav {
+    min-width: auto;
+    padding: .3rem 0;
+    padding: 5px 30px;
+}
+
+nav li a {
+    transition: 0.4s;
+    color: var(--white);
+}
+
+nav li a:hover {
+    color: var(--blue);
+}
+
+nav a img {
+    margin-right: 30px;
+    vertical-align: middle;
+}
+
+
+
+
+/*
+==================================================================
+    GLOBAL / MOBILE MENU
+==================================================================
+*/
+
+#nav-checkbox {
+    position: absolute;
+    top: -99px;
+}
+
+#label-mobile {
+    position: relative;
+    float: right;
+    top: 10px;
+    cursor: pointer;
+    color: var(--white);
+}
+
+#menu-mobile {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: -100vw;
+    z-index: 99;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: .25s;
+    transition-timing-function: ease-in-out;
+    background-color: var(--black);
+}
+
+#nav-mobile  {
+    margin-top: -70px;
+}
+
+#menu-mobile li {
+    display: block;
+    line-height: 1em;
+    font-size: 1em;
+}
+
+#social-mobile li {
+    display: inline-block;
+}
+
+#social-mobile li a {
+    color: var(--blue);
+}
+
+input[type="checkbox"]:checked ~ #menu-mobile {
+    left: 0;
+}
+
+
+
+
+/*
+==================================================================
+    GLOBAL / DESKTOP MENU
+==================================================================
+*/
+
+#nav-menu, 
+#social-menu {
+    display: none;
+}
+
+#nav-menu li:hover {
+    animation: menuhop .2s 1;
+    color: var(--blue);
+}
+
+@keyframes menuhop {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-.25em);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#social-menu {
+    float: right;
+}
+
+#social-menu li a {
+    margin-left: -20px;
+    padding: 3px 5px;
+    border: 2px solid var(--blue);
+    font-size: .85em;
+}
+
+#social-menu li a:hover {
+    border-color: var(--darkgrey);
+}
+
+
+
+
+/*
+==================================================================
+    INDEX / HOME PAGE
+==================================================================
+*/
+
+#slideshow, #slideshow-2, #slideshow-overlay {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+#slideshow {
+    background-image: url('https://d1b8neuccscdpp.cloudfront.net/img/viewfinder/uploads/5a5e84cd30955.jpg');
+}
+
+#slideshow-2 {
+    background-image: url('https://d1b8neuccscdpp.cloudfront.net/img/viewfinder/uploads/5a5e84c6570e8.jpg');
+    animation: slideshow  10s infinite;
+}
+
+#slideshow-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient( to top,rgba(49, 57, 78, 0.5) 25%, rgba(0, 0, 0, 1.0));
+}
+
+@keyframes slideshow {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+/*
+==================================================================
+    INDEX / HEADER CONTENT
+==================================================================
+*/
+
+#header-content {
+    position: relative;
+    height: 100vh;
+    font-family: 'Passion One Bold', sans-serif;
+    text-align: center;
+    z-index: 1;
+}
+
+#header-content h1, #header-content span {
+    border-radius: 2px;
+    box-shadow: var(--boxshadow);
+}
+
+#header-content h1 {
+    display: inline-block;
+    width: 90%;
+    margin-top: 100px;
+    padding: 25px 5px;
+    font-size: 3rem;
+    transform: rotate(-2deg);
+    color: var(--white);
+    background-color: var(--black);
+    
+}
+
+#header-content span {
+    display: block;
+    position: absolute;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+
+
+
+/*
+==================================================================
+    INDEX / HTML AUDIO 
+==================================================================
+*/
+
+/* 
+*    Html Audio Element presented a challange 
+*    to style as it is different across browsers
+*    defaults to a grey background, Without using JavaScript
+*    I cannot create my own controls and must rely on the HTML5 Element
+*/
+
+#album-preview {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #191919;
+}
+
+#album-preview figure {
+    position: absolute;
+    top: -164px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    color: var(--white);
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.6rem;
+    text-shadow: 2px 2px 6px #111;
+}
+
+#album-preview img {
+    visibility: hidden;
+    border: 3px solid var(--black);
+}
+
+
+
+
+/*
+==================================================================
+    INDEX / NEWS FEED
+==================================================================
+*/
+
+#news-feed {
+    width: 100%;
+    padding: 25px 0;
+    color: #ddd;
+    background-color: var(--black);
+}
+
+#news-feed h2 {
+    margin-left: 30px;
+    margin-bottom: 15px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.news-item-container {
+    max-width: 270px;
+    min-width: 250px;
+}
+
+.news-image {
+    height: 150px;
+}
+
+.news-heading {
+    font-size: .8em;
+    color: var(--blue);
+}
+
+.news-details {
+    font-weight: bold;
+}
+
+.news-subline {
+    font-weight: lighter;
+}
+
+
+
+
+/*
+==================================================================
+   INDEX / CREATIVE SECTION
+==================================================================
+*/
+
+#creative {
+    position: relative;
+    background: linear-gradient( 
+            rgba(46, 55, 78, 1.0),  
+            rgba(46, 55, 78, 1.0)
+            );
+    color: var(--white);
+    z-index: -1;
+}
+
+#creative div {
+    min-height: 500px;
+    overflow: hidden;
+}
+
+#creative p , #creative img {
+    display: inline-block;
+} 
+
+#creative p {
+    position: relative;
+    top: 30%;
+    left: 10%;
+    max-width: 80%;
+    padding: 40px 30px 40px 0;
+    font-size: 1.5rem;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px #000;
+}
+
+#creative img {
+    width: 60%;
+    vertical-align: bottom;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+
+
+/*
+==================================================================
+   STORE
+==================================================================
+*/
+
+.store-h2 {
+    margin: 100px 50px 0;
+}
+
+.media-title, .media-price {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.media-image {
+    height: 200px;
+}
+
+.media-links {
+    margin-top: 20px;
+}
+
+.media-links a {
+    display: block;
+    height: 25px; 
+    color: #424242;
+}
+
+.media-links a:hover {
+    transition: 0.3s;
+    text-decoration: underline;
+    color: var(--linkblue);
+}
+
+.media-links a span {
+    display: inline-block;
+    width: 30px;
+}
+
+
+
+
+/*
+==================================================================
+   MEDIA
+==================================================================
+*/
+
+/* 
+*   PHOTOS
+*/
+
+.media-h2 {
+    margin: 100px 30px 0;
+}
+
+#photos {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.column {
+    flex: 96%;
+    max-width: 98%;
+    padding: 0 5px;
+}
+
+.column img {
+    width: 100%;
+    margin-top: 8px;
+}
+
+#photos-grid-cover {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: -125px;
+    margin-bottom: -90px;
+    z-index: 1;
+    background: var(--white);
+}
+
+/*
+*   VIDEOS / YOUTUBE EMBEDS
+*/
+
+#videos {
+    padding: 30px 30px 110px;
+}
+
+.video-container {
+    position: relative;
+    margin-top: 40px;
+    padding-bottom: 56.21%;
+}
+
+.video-title {
+    position: absolute;
+    top: -35px;
+    left: 5px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
+
+/*
+==================================================================
+   TOUR
+==================================================================
+*/
+
+.tour-h2  {
+    margin: 60px 30px;;
+}
+
+#tour-table {
+    padding-bottom: 150px;
+}
+
+table {
+    width: 100%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    border-collapse: collapse;
+}
+
+th  {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-family: 'Passion One Bold', sans-serif;
+    font-size: 1.5em;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+th i {
+    padding-right: 15px;
+    font-size: 0.8em;
+}
+
+th, td {
+    text-align: left;
+    padding-left: 15px;
+}
+
+tr {
+    height: 3em;
+    padding: 15px;
+    font-size: 0.9em;
+    border-bottom: 1px solid#999;
+}
+
+tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+td .available {
+    color: var(--linkblue);
+}
+
+td a:hover {
+    text-decoration: underline; 
+}
+
+#table-mobile-heading {
+    display: none;
+}
+
+
+
+
+/*
+==================================================================
+   NEWSLETTER
+==================================================================
+*/
+
+#newsletter form {
+    max-width: 600px;
+    margin: 70px auto;
+    padding: 0 30px;
+    border: none;
+}
+
+#newsletter fieldset {
+    margin: 60px 0 80px;
+    border: none;
+}
+
+#newsletter fieldset legend {
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.6rem;
+    letter-spacing: 2.5px;
+}
+
+#newsletter label {
+    display: block;
+    margin: 30px 0 10px;
+}
+
+#newsletter input[type="text"],
+#newsletter input[type="email"],
+#newsletter input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+}
+
+.multiline-fields label,
+.multiline-fields p {
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.input-container{
+    display: block;
+}
+
+.multiline-fields span {
+    margin: 15px;  
+}
+
+#agree-div {
+    margin-bottom: 50px;
+}
+
+#agree-div input[type="checkbox"] {
+    margin-top: 30px;
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+#agree-div label{
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 0.7rem;
+}
+
+#form-buttons input {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    transition: 0.4s;
+    cursor: pointer;
+    color: var(--white);
+    box-shadow: var(--boxshadow);
+    background-color: var(--darkblue);
+}
+
+#form-buttons input:hover {
+    background-color: var(--black);
+    box-shadow: 0 3px 15px 1px rgba(0,0,0,0.8);
+}
+
+
+
+
+/*
+==================================================================
+   MEDIA QUERIES
+==================================================================
+*/
+
+/* Media Queries based on content breakpoints and not common device specific breakpoints */
+
+/* 
+*   Target only webkit browsers - from Stack Overflow 
+*   Issue: Browsers style the html audio individually
+*   Solution: Target webkit browsers and set div background color;
+*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
+
+    #album-preview {
+        background-color: var(--white); 
+    } 
+}
+
+/* 
+*   MOBILE QUERIES
+*/
+
+/* 
+*    In this case a desktop first approach was preferable.
+*    Help from CSS Tricks was needed to arrange the table in mobile view.
+*    In particular the addition of nth:selector and :before selector to transform the headings
+*    into a good mobile view.
+*    When desktop width is reached - will be transformed to a table again.
+*/
+
+@media screen and (max-width: 750px) { 
+
+    #table-desktop-heading {
+        display: none;
+    }
+
+    #table-mobile-heading {
+        display: table-row;
+        background: none;
+    }
+
+    table, thead, tbody, th, td, tr { 
+        display: block; 
+    }
+
+    tr {
+        height: auto;
+    }
+
+    td { 
+        position: relative;
+        min-height: 2em;
+        margin-left: 10px;
+        padding-left: 40%; 
+        border: none;
+    }
+    
+    td:before { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+    }
+    
+    td:nth-of-type(1):before { content: "Date"; font-weight: bold;}
+    td:nth-of-type(2):before { content: "Location"; font-weight: bold;}
+    td:nth-of-type(3):before { content: "Venue"; font-weight: bold;}
+    td:nth-of-type(4):before { content: "Tickets"; font-weight: bold;}
+}
+
+/* 
+*   MOBILE FIRST APPROACH - DESKTOP QUERIES
+*/
+
+/* 
+*   600PX
+*/
+
+@media screen and (min-width: 600px) {
+
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+
+    .column {
+        flex: 46%;
+        max-width: 48%;
+    }
+
+    .video-container {
+        display: inline-block;
+        width: calc(50% - 10px);
+        padding-bottom: 27.2%;
+    }
+}
+
+/* 
+*   750PX
+*/
+
+@media screen and (min-width: 750px) {
+
+    /* Disable mobile menu */
+    #label-mobile, 
+    #menu-mobile {
+        display: none;
+    }
+
+    /* Activate desktop menu */
+    #nav-menu, 
+    #social-menu {
+        display: inline-block;
+    }
+
+    #header-content h1 {
+        width: auto;
+        max-width: 85%;
+        padding: 20px 30px;
+        font-size: 6rem;
+    }
+
+    #header-content span {
+        padding: 10px 20px;
+        font-size: 2rem;
+    }
+
+    #album-preview figure {
+        top: -164px;
+        font-size: 1.8em;
+    }
+
+    #album-preview img {
+        visibility: visible;
+    }
+
+    #creative img {
+        width: 40%;
+        bottom: -10%;
+    }
+
+    .tour-h2 {
+        margin-left: 10px;
+    }
+}
+
+/* 
+*   900PX
+*/
+
+@media screen and (min-width: 900px) {
+
+    #creative p { 
+        padding-top: 100px;
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    #creative img {
+        bottom: -10%;
+    }
+
+    .grid-container {
+        grid-template-columns: auto auto auto;
+    }
+
+    .column {
+        flex: 22%;
+        max-width: 24%;
+    }
+
+    .video-container {
+        width: calc(25% - 10px);
+        padding-bottom: 13.5%;
+    }
+}
+
+/* 
+*   1200PX
+*/
+
+@media screen and (min-width: 1200px) {
+
+    .grid-container {
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .media-h2 {
+        margin-left: 0;
+    }
+}
