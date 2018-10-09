@@ -1,7 +1,44 @@
 
 /*
 ==================================================================
-    GLOBAL / FONTS
+    SUMMARY / GLOSSARY
+==================================================================
+*/
+
+/* 
+    1. GLOBAL STYLES
+    2. NAVIGATION / MENU
+    3. PAGE: INDEX / HOME
+    4. PAGE: STORE
+    5. PAGE: MEDIA (PHOTOS & VIDEOS)
+    6. PAGE: TOUR / LIVE DATES
+    7. PAGE: NEWSLETTER
+    8. MEDIA QUERIES
+*/
+
+/* 
+*    This file is split up into 8 main sections, based on global styles,
+*    navigation, pages and media queries. During development, each section 
+*    had its own page for ease of development and has now been reduced to a 
+*    single page to reduce file import time. 
+*/
+
+/* 
+*    Where possible I have tried to add comments to special css rules which
+*    might require explaining why and what is being applied.
+*/
+
+/* 
+*    I have decided to use css grid, flexbox and pure css to style the website,
+*    partly due to bootstrap appling too many default styles which I would have to
+*    overwrite. Please note that I have checked this code in jigsaw and the only errors
+*    which apply are due to css variables which dont seem to be recognised.
+*/
+
+
+/*
+==================================================================
+    1. GLOBAL / FONTS
 ==================================================================
 */
 
@@ -70,6 +107,10 @@ a {
     text-decoration: none;
 }
 
+hr {
+    width: 5%;
+}
+
 footer  {
     text-align: center;    
     padding: 1px;
@@ -77,10 +118,7 @@ footer  {
     background-color: var(--black);
 }
 
-hr {
-    width: 5%;
-}
-
+/* General container used globally to center content on large screens */
 nav, 
 #news-feed-container, 
 #creative div, 
@@ -94,10 +132,12 @@ nav,
     min-width: 320px;
 }
 
+/* Highlight active page on desktop menu */
 .active {
     color: var(--blue);
 }
 
+/* Global page heading styles */
 .heading {
     border-bottom: none;
     padding: 110px 30px 40px;
@@ -106,6 +146,7 @@ nav,
     color: var(--white);
 }
 
+/* Alternate page heading */
 .heading-alt {
     border-bottom: 40px solid var(--black);
     background: linear-gradient( to top,rgba(49, 57, 78, 0.9) 25%, rgba(0, 0, 0, 1.0)), url('https://d1b8neuccscdpp.cloudfront.net/img/viewfinder/uploads/5a5e84cd30955.jpg'); 
@@ -125,6 +166,7 @@ nav,
     text-transform: capitalize;
 }
 
+/* Default grid container for displaying news, store, merch items, media query required for breakpoints */
 .grid-container {
     display: grid;
     grid-gap: 50px;
@@ -139,6 +181,7 @@ nav,
     margin: 0 auto 110px;
 }
 
+/* Used on footer */
 .reverse-letter {
     display: inline-block;
     transform: scale(-1, 1);
@@ -149,10 +192,11 @@ nav,
 
 /*
 ==================================================================
-    GLOBAL / NAVIGATION
+    2. NAVIGATION 
 ==================================================================
 */
 
+/* Following Styles are applied regardless of mobile or desktop navigation */
 header {
     position: fixed;
     top: 0;
@@ -187,15 +231,17 @@ nav a img {
 
 /*
 ==================================================================
-    GLOBAL / MOBILE MENU
+    NAVIGATION / MOBILE MENU
 ==================================================================
 */
 
+/* Checkbox hack used as no JavaScript allowed in this project - positioned off screen */
 #nav-checkbox {
     position: absolute;
     top: -99px;
 }
 
+/* Label can be clicked causing an checkbox toggle event and producing mobile menu*/
 #label-mobile {
     position: relative;
     float: right;
@@ -204,6 +250,7 @@ nav a img {
     color: var(--white);
 }
 
+/* Positioned off screen - used flex to center menu content  */
 #menu-mobile {
     position: absolute;
     height: 100vh;
@@ -238,6 +285,7 @@ nav a img {
     color: var(--blue);
 }
 
+/* When toggled - siblings with #menu-mobile change left position - reveling mobile menu */
 input[type="checkbox"]:checked ~ #menu-mobile {
     left: 0;
 }
@@ -247,20 +295,23 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 /*
 ==================================================================
-    GLOBAL / DESKTOP MENU
+    NAVIGATION / DESKTOP MENU
 ==================================================================
 */
 
+/* Mobile first approach require desktop menu initially hidden */
 #nav-menu, 
 #social-menu {
     display: none;
 }
 
+/* Animation applied to hover on menu item */
 #nav-menu li:hover {
     animation: menuhop .2s 1;
     color: var(--blue);
 }
 
+/* Produces a menu hop */
 @keyframes menuhop {
     0% {
         transform: translateY(0);
@@ -293,8 +344,15 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 /*
 ==================================================================
-    INDEX / HOME PAGE
+    3. PAGE: INDEX / HOME PAGE
 ==================================================================
+*/
+
+/* 
+*    Layered up divs with background-image and a set height, created animation 
+*    which fades the image on top in and out producing a slideshow effect, 
+*    additional layer on top is a gradient to make text more legible.
+*    Without using JavaScript, I felt this is a good solution for a slideshow effect.    
 */
 
 #slideshow, #slideshow-2, #slideshow-overlay {
@@ -390,7 +448,9 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 *    Html Audio Element presented a challange 
 *    to style as it is different across browsers
 *    defaults to a grey background, Without using JavaScript
-*    I cannot create my own controls and must rely on the HTML5 Element
+*    I cannot create my own controls and must rely on the HTML5 Element.
+*    A media query was needed to target webkit browsers, default background color 
+*    was set to firefox's audio element color.   
 */
 
 #album-preview {
@@ -412,6 +472,7 @@ input[type="checkbox"]:checked ~ #menu-mobile {
     text-shadow: 2px 2px 6px #111;
 }
 
+/* Album image is initially hidden on small screens - looks cluttered */
 #album-preview img {
     visibility: hidden;
     border: 3px solid var(--black);
@@ -426,6 +487,7 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 ==================================================================
 */
 
+/* CSS grid applied in this section */
 #news-feed {
     width: 100%;
     padding: 25px 0;
@@ -468,6 +530,12 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 ==================================================================
    INDEX / CREATIVE SECTION
 ==================================================================
+*/
+
+/* 
+*   This section proved a challange for what was imagined initally,
+*   making sure the text does not overlap the image required checking and setting breakpoints often.
+*   Floating the text around the image was not successful. But overall happy with the outcome.
 */
 
 #creative {
@@ -516,8 +584,14 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 /*
 ==================================================================
-   STORE
+   4. PAGE: STORE
 ==================================================================
+*/
+
+/* 
+*   Again CSS grid proved a good fit here, elements are evenly spaced,
+*   resize well and looks professional, imo. Overall this page was about
+*   showcasing the products and making the purchase links easy to access.
 */
 
 .store-h2 {
@@ -561,12 +635,17 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 /*
 ==================================================================
-   MEDIA
+   5. PAGE: MEDIA
 ==================================================================
 */
 
 /* 
 *   PHOTOS
+*   I wanted a mosaic / masonary style layout for this section, w3 schools provided 
+*   a good example which allowed to adapt my idea in a similar fashion. (But not direct copy).
+*   Flexbox was used and in particular was great for resizing images even before breakpoints.
+*   An issue I came across was the bottom of the mosaic div was not even so a quick fix 
+*   was to cover it was another div, looks even now.
 */
 
 .media-h2 {
@@ -603,6 +682,10 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 /*
 *   VIDEOS / YOUTUBE EMBEDS
+*   An issue with resizing youtube embeds was solved with the code that comes
+*   with a youtube embed. Padding = 56.21%
+*   When adding breakpoints this number was halfed and quatered to accomadate more
+*   embeds on a single row.
 */
 
 #videos {
@@ -635,12 +718,22 @@ input[type="checkbox"]:checked ~ #menu-mobile {
 
 /*
 ==================================================================
-   TOUR
+   6. PAGE: TOUR
 ==================================================================
 */
 
+/* 
+*   Converting a table to mobile format and retaining sufficent space was an issue,
+*   CSS Tricks had a good article which to make life easier had a desktop first approach.
+*   The table does not behave like a table on mobile screens and to code which was learned was 
+*   applying a nth:selector and :before to still make the table data sections have relevent heaadings 
+*   which are applyed before the table data which is positioned to the right side of the screen.
+*
+*   When transformed back to table form - its just a simple styled form.
+*/
+
 .tour-h2  {
-    margin: 60px 30px;;
+    margin: 60px 30px;
 }
 
 #tour-table {
@@ -703,8 +796,15 @@ td a:hover {
 
 /*
 ==================================================================
-   NEWSLETTER
+   7. PAGE: NEWSLETTER
 ==================================================================
+*/
+
+/* 
+*   A simple form with styling elements, buttons and distance 
+*   to create something that looks nice!
+*   Each browser creates there own version of checkboxs, radio etc..
+*   I was happy with the defaults and they still look well.
 */
 
 #newsletter form {
@@ -792,7 +892,7 @@ select {
 
 /*
 ==================================================================
-   MEDIA QUERIES
+   8. MEDIA QUERIES
 ==================================================================
 */
 
@@ -834,6 +934,7 @@ select {
         background: none;
     }
 
+    /* Make all elements behave like blocks */
     table, thead, tbody, th, td, tr { 
         display: block; 
     }
@@ -850,6 +951,7 @@ select {
         border: none;
     }
     
+    /* Apply "Fake" headings to each table data */
     td:before { 
         position: absolute;
         top: 0;
@@ -859,6 +961,7 @@ select {
         white-space: nowrap;
     }
     
+    /* Target every four in a table row and add text */
     td:nth-of-type(1):before { content: "Date"; font-weight: bold;}
     td:nth-of-type(2):before { content: "Location"; font-weight: bold;}
     td:nth-of-type(3):before { content: "Venue"; font-weight: bold;}
@@ -874,6 +977,10 @@ select {
 */
 
 @media screen and (min-width: 600px) {
+
+    /* 
+    *   Screen should accomadate two elements side by side   
+    */
 
     .grid-container {
         grid-template-columns: auto auto;
@@ -909,6 +1016,7 @@ select {
         display: inline-block;
     }
 
+    /* Reposition and resize Index Page Header Content */
     #header-content h1 {
         width: auto;
         max-width: 85%;
@@ -926,6 +1034,7 @@ select {
         font-size: 1.8em;
     }
 
+    /* Show album preview artwork now screen estate is bigger */
     #album-preview img {
         visibility: visible;
     }
@@ -955,6 +1064,10 @@ select {
     #creative img {
         bottom: -10%;
     }
+
+    /* 
+    *   Screen should accomadate three elements side by side   
+    */
 
     .grid-container {
         grid-template-columns: auto auto auto;
