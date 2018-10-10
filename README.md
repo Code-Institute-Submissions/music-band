@@ -117,7 +117,7 @@ An issue I had to resolve was as the tour dates feature was made with a table, w
 
 ### Newsletter Page
 
-The newsletter page is a simple form using semantic form elements and resizing accordingly for different widths. Most form elements have a required attribute for html5 validation although unfortunately the form element itself does not contain a method or action attribute as no backend or JavaScript being available. The page simply refreshes on submit and does not break otherwise.
+The newsletter page is a simple form using semantic form elements and resizing accordingly for different widths. Most form elements have a required attribute for html5 validation although unfortunately as no backend or JavaScript being available the form simply redirects to a thank you page.
 
 ---
 
