@@ -897,6 +897,7 @@ select {
 */
 
 /* Media Queries based on content breakpoints and not common device specific breakpoints */
+/* Website was designed with Mobile first approach aside from the tour page with a table as more css would need to be wrote than would be convienient */
 
 /* 
 *   Target only webkit browsers - from Stack Overflow 
