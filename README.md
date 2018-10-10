@@ -144,7 +144,9 @@ Overall I'm happy with the final outcome and even though browsers do all render 
 
 Throughout the process I have built my project locally using vs code as my editor and chrome as my preferred browser. I also have firefox open to check for consistency. I have regularly tracked my files, made local git commits and pushed to my github repository.
 
-I have deployed the website to my personal website via file transfer and it is currently viewable at [http:seanmurphy.eu/music-band](http:seanmurphy.eu/music-band).
+The primary site as requested in the instructions is hosted at [https://nazarja.github.io/music-band/index.html](https://nazarja.github.io/music-band/index.html).
+
+I have also deployed the website to my personal website via file transfer and it is currently viewable at [http:seanmurphy.eu/music-band](http:seanmurphy.eu/music-band).
 
 All code is viewable at my github repository at [https://github.com/nazarja/music-band](https://github.com/nazarja/music-band).
 
