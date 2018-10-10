@@ -43,7 +43,13 @@ I decided on the number of pages and amount of content I would have, created bas
 - As a user, I can see images and videos relating to the band.
 - As a user, I can hear a preview of the bands music.
 
-NOTE: SHOW WIREFRAMES HERE
+
+![index](https://github.com/nazarja/music-band/blob/master/assets/wireframe/index.png)
+![store](https://github.com/nazarja/music-band/blob/master/assets/wireframe/store.png)
+![media](https://github.com/nazarja/music-band/blob/master/assets/wireframe/media.png)
+![tour](https://github.com/nazarja/music-band/blob/master/assets/wireframe/tour.png)
+![newsletter](https://github.com/nazarja/music-band/blob/master/assets/wireframe/newsletter.png)
+![mobile-menu](https://github.com/nazarja/music-band/blob/master/assets/wireframe/mobile-menu.png)
 
 ---
 
