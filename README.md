@@ -6,7 +6,7 @@
 
 I decided to continue with the suggested theme of a music band and have chosen the band "Queens of the Stone Age".
 
-I decided early on how I wanted my project to look, which technologies I was going to use and what should be included in a website of this category type. I have created this project with no JavaScript or other libraries, which while proving a challange at times, enabled me to think outside the box when implementing certain features and showcases my understanding of the relationships between elements. 
+I decided early on how I wanted my project to look, which technologies I was going to use and what should be included in a website of this category type. I have created this project with no JavaScript or other libraries, which while proving a challenge at times, enabled me to think outside the box when implementing certain features and showcases my understanding of the relationships between elements. 
 
 Ultimately, my overall goal was to create a functional, modern and user friendly site, which loads quickly, is responsive on devices on all sizes and provides a good user experience which is both easy to navigate and informative.
 
@@ -24,10 +24,10 @@ When deciding upon a ux layout I wanted to put myself in the position of the end
 
 - *Why* am I going to this website and what reason would I have to go there?
 - *What* information should I expect to find?
-- *When* I first load the website, how likely am I to stay, does the inital first paint grab my attention?
+- *When* I first load the website, how likely am I to stay, does the initial first paint grab my attention?
 - *Can* I get to where I want to go easily and at a glance figure out how to get there?
 - *Does* the website contain common features I'd expect to find on any other music bands website?
-- *Did* the website fulfill my expections and needs?
+- *Did* the website fulfil my expectations and needs?
 
 To answer these questions I first browsed a number of high profile music band websites to look for common patterns and features and how they applied to different screen sizes. I also browsed on awwwards.com to get an understanding of the kind of layouts that were common in a music category. I also had to take into consideration that not using any JavaScipt would affect how content could be presented and find solutions to issues such as mobile navigation.  
 
@@ -73,7 +73,7 @@ The sites color scheme takes inspiration from the bands new album logo which com
 
 The navigation proved to be tricky. I revisited this feature a number of times to edit and make adjustments. The mobile menu needed a way to open and close. I decided upon the checkbox hack where the checkbox toggle event would trigger a hidden menu to slide in. The checkbox would be hidden offscreen and the label would be clicked to activate the menu. 
 
-In desktop mode, I applied an animation to the menu item for visual purposes. Originally I had a hover menu for the social media links but the html validator didnt approve of a div within an ul although the browser rendered tis fine, so these feature was removed. 
+In desktop mode, I applied an animation to the menu item for visual purposes. Originally I had a hover menu for the social media links but the html validator didn't approve of a div within an ul although the browser rendered it fine, so these feature was removed. 
 
 
 #### Index / Main Header
@@ -82,16 +82,16 @@ I wanted to to provide some sort of full screen slideshow, without JavaScript th
 
 #### Index / HTML Audio
 
-Creating the audio feature was also a bit of a challange. firstly as to not infridge on any copyright, I downloaded an official album preview from soundcloud which feature the first 20 secs of each song on the album. Which went perfectly with the websites theme of promoting a new tour / new album. I wanted to implement a custom audio player, but without JavScript I was limited to the default browser html5 audio element. The challange here was to fit the style of the audio element in with the websites theme. With each browser providing their on style, with a css rule I targeted webkit browsers and set the color of the background div to that of webkits audio elemment. The default div background color would be set similar to firefox's audio element. With microsoft edge taking a hit on this one. I would assume most users of the bands target age group would be using either chrome, safari, brave (all webkit) or safari browsers. 
+Creating the audio feature was also a bit of a challange. firstly as to not infringe on any copyright, I downloaded an official album preview from soundcloud which feature the first 20 secs of each song on the album. Which went perfectly with the websites theme of promoting a new tour / new album. I wanted to implement a custom audio player, but without JavaScript I was limited to the default browser html5 audio element. The challange here was to fit the style of the audio element in with the websites theme. With each browser providing their on style, with a css rule I targeted webkit browsers and set the color of the background div to that of webkits audio element. The default div background color would be set similar to firefox's audio element. With microsoft edge taking a hit on this one. I would assume most users of the bands target age group would be using either chrome, safari, brave (all webkit) or safari browsers. 
 
 #### Index / Creative Section
 
-For this section I took to gimp to isolate an image from the bands previous artwork. This section required multiple breakpoints to grow and shrink with the layout properly. Revisted a few times to cut down on code wile still maintaining a good look. 
+For this section I took to gimp to isolate an image from the bands previous artwork. This section required multiple breakpoints to grow and shrink with the layout properly. Revisited a few times to cut down on code wile still maintaining a good look. 
 
 ### Store Page
 
 This section was quick and easy to implement with the longest part collecting the correct links to each retailer for an album.
-I used CSS Grid for the entirety of the content. Only adjusting breakpoints when the content need it. All links are vaild and open in a new tab.
+I used CSS Grid for the entirety of the content. Only adjusting breakpoints when the content need it. All links are valid and open in a new tab.
 
 An issue I encountered was that I was linking to images on google play which are in webp format, which seems to be only supported by chrome. The solution was to download and convert the images to a more universal format such as jpg or png and serve the images locally instead.
 
@@ -124,7 +124,7 @@ Throughout the entire project build I was conscious and constently testing each 
 I have tested the code on the **W3C** website using both the html and css validator. The only real issue I can find is that the css validator is throwing an error on the use of css variables which I understand to be valid css, so I have ignored this as a false error.
 
 
-My main tool was using chromes dev tools device toolbar to simulate various devices and responsive mode to check for when the content required breakpoints. At the end of each page I uploaded the site to my personal portfolio site and tested and both andrrois and iphone using safari, chrome and firefox browsers. Revisted any code which needed adjustment and tried to find a solution which was acceptable for all browsers. 
+My main tool was using chromes dev tools device toolbar to simulate various devices and responsive mode to check for when the content required breakpoints. At the end of each page I uploaded the site to my personal portfolio site and tested and both andrrois and iphone using safari, chrome and firefox browsers. Revisited any code which needed adjustment and tried to find a solution which was acceptable for all browsers. 
 
 I have also asked my family members for they're feedback and how they found the site in general and whether they would change anything or found something difficult to use or confusing.
 
@@ -169,4 +169,4 @@ All code is viewable at my github repository at [https://github.com/nazarja/musi
 
 awwwards.com , pearljam.com, nin.com, qotsa.com
 
-Also a google search for best music websites!
+Also a google search for the best music websites!
