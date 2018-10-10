@@ -98,20 +98,20 @@ An issue I encountered was that I was linking to images on google play which are
 ### Media Page
 
 This page implements flexbox with was perfect for resizing images and arranging columns.
-I wanted a mosaic look for the photographs and found a good solution of w3 schools to which I could adapt to my section. The Photos are arranged in 4 columns with the images set to 100% width. Breakpoints stack two and all columns on top of each other respectively. Images are directly from qotsa.com. One issue I had was with page load speed, So I decided to download the images instead of lining to them. Then reduce the file size to what would be there maxium width. This reduced the image sizes and load time considerably.
+I wanted a mosaic look for the photographs and found a good solution of w3 schools to which I could adapt to my section. The Photos are arranged in 4 columns with the images set to 100% width. Breakpoints stack two and all columns on top of each other respectively. Images are directly from qotsa.com. One issue I had was with page load speed, So I decided to download the images instead of lining to them. Then reduce the file size to what would be there maximum width. This reduced the image sizes and load time considerably.
 
-Videos are YouTube embeds, A way of making these responsive comes with the youtube embed code. Padding = 56.21%. To further add more videos on the same row, this number was halved and quartered. The videos now resize perfectly.
+Videos are YouTube embeds, A way of making these responsive comes with the YouTube embed code. Padding = 56.21%. To further add more videos on the same row, this number was halved and quartered. The videos now resize perfectly.
 
 ### Tour Page
 
 This page provides information to a user about upcoming live dates and is tickets are available a link to ticketmaster.
 The main content is a form with dummy data taken from the nine inch nails website, as queens of the stone age are not currently on tour.
 
-An issue I had to resolve was as the tour dates feature was made with a table, when resizing to mobile width the table was far too wide and required a solution. CSS tricks had a good article which I could adapt to my own table. This involved a desktop first approach and on mobile screens treating the table as block element and applying a `:before` and `td:nth-of-type` selector on the td to insert the heading adjacent to the information. Otherwise it would be unclear what the information was refering to.
+An issue I had to resolve was as the tour dates feature was made with a table, when resizing to mobile width the table was far too wide and required a solution. CSS tricks had a good article which I could adapt to my own table. This involved a desktop first approach and on mobile screens treating the table as block element and applying a `:before` and `td:nth-of-type` selector on the td to insert the heading adjacent to the information. Otherwise it would be unclear what the information was referring to.
 
 ### Newsletter Page
 
-The newsletter page is a simple form using semantic form elements and resizing accordingly for different widths. Most form elements have a required attribute for html5 validation althhough unfortunately the form element itself does not contain a method or action attribute as no backend or JavaScript being available. The page simply refreshes on submit anfd does not break otherwise.
+The newsletter page is a simple form using semantic form elements and resizing accordingly for different widths. Most form elements have a required attribute for html5 validation although unfortunately the form element itself does not contain a method or action attribute as no backend or JavaScript being available. The page simply refreshes on submit and does not break otherwise.
 
 ---
 
@@ -119,12 +119,12 @@ The newsletter page is a simple form using semantic form elements and resizing a
 
 ---
 
-Throughout the entire project build I was conscious and constently testing each new feature after was created to check for consistency across browsers and different screen sizes. I was also concerned with page speed and regularly used google lighthouse to audit performance and page speed.
+Throughout the entire project build I was conscious and constantly testing each new feature after was created to check for consistency across browsers and different screen sizes. I was also concerned with page speed and regularly used google lighthouse to audit performance and page speed.
 
 I have tested the code on the **W3C** website using both the html and css validator. The only real issue I can find is that the css validator is throwing an error on the use of css variables which I understand to be valid css, so I have ignored this as a false error.
 
 
-My main tool was using chromes dev tools device toolbar to simulate various devices and responsive mode to check for when the content required breakpoints. At the end of each page I uploaded the site to my personal portfolio site and tested and both andrrois and iphone using safari, chrome and firefox browsers. Revisited any code which needed adjustment and tried to find a solution which was acceptable for all browsers. 
+My main tool was using chromes dev tools device toolbar to simulate various devices and responsive mode to check for when the content required breakpoints. At the end of each page I uploaded the site to my personal portfolio site and tested and both android and iphone using safari, chrome and firefox browsers. Revisited any code which needed adjustment and tried to find a solution which was acceptable for all browsers. 
 
 I have also asked my family members for they're feedback and how they found the site in general and whether they would change anything or found something difficult to use or confusing.
 
@@ -136,9 +136,9 @@ Overall I'm happy with the final outcome and even though browsers do all render 
 
 ---
 
-Throughout the process I have built my project locally using vs code as my editor and chrome as my prefered browser. I also have firefox open to check for consistency. I have regularly tracked my files, made local git commits and pushed to my github repository.
+Throughout the process I have built my project locally using vs code as my editor and chrome as my preferred browser. I also have firefox open to check for consistency. I have regularly tracked my files, made local git commits and pushed to my github repository.
 
-I have deployed the website to my personal website via file tranfer and it is currently viewable at [http:seanmurphy.eu/music-band](http:seanmurphy.eu/music-band).
+I have deployed the website to my personal website via file transfer and it is currently viewable at [http:seanmurphy.eu/music-band](http:seanmurphy.eu/music-band).
 
 All code is viewable at my github repository at [https://github.com/nazarja/music-band](https://github.com/nazarja/music-band).
 
@@ -156,9 +156,9 @@ All code is viewable at my github repository at [https://github.com/nazarja/musi
 
 ### Media
 
-- The photos in this project were obtained from the offical Queens of the Stone Age website, and some from a google photos search.
+- The photos in this project were obtained from the official Queens of the Stone Age website, and some from a google photos search.
 - Album images are from Google Play
-- Videos are embeded from Youtube
+- Videos are embedded from YouTube
 - Audio is from Soundcloud
 
 ### Acknowledgements
